@@ -1,0 +1,41 @@
+body{
+    padding-top: 45px;
+    padding-bottom: 30px;
+    margin:0px !important;
+}
+.fixed-header, .fixed-footer{
+    width: 100%;
+    position: fixed;
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+}
+.fixed-header{
+    top: 0;
+}
+.fixed-footer{
+    bottom: 0;
+}
+.container{
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+.leftMenu{
+    width: 15%;
+    background-color: black;
+    height: 100%;
+}
+.main {
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
