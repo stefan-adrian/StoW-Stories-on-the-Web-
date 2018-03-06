@@ -22,11 +22,38 @@ body{
     height: 100%;
     display : -webkit-inline-box;
 }
+.container nav {
+    width: 33.33%;
+    height: 100%;
+}
+.container .centerHeader{
+    width: 33.33%;
+    z-index: 3;
+    height: 100%;
+}
+.container .rightHeader{
+    width:33.34%;
+    z-index: 3;
+    height: 100%;
+    text-align: right;
+}
+
 nav a{
     color: #fff;
     text-decoration: none;
     padding: 7px 25px;
     display: inline-block;
+}
+
+.centerHeader form input:focus {
+    width: 100%;
+}
+
+.rightHeader a{
+color: #fff;
+text-decoration: none;
+padding: 7px 25px;
+display: inline-block;
 }
 .leftMenu{
     width: 15%;
