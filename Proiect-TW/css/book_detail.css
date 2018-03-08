@@ -1,20 +1,26 @@
 body{
-    padding-top: 45px;
-    padding-bottom: 30px;
     margin:0px !important;
+}
+.logo{
+    width: 150px;
+    height: 70px;
+    margin-top: -7px;
+    margin-left: 30px; 
 }
 .fixed-header, .fixed-footer{
     width: 100%;
-    position: fixed;
     background: #333;
-    padding: 10px 0;
+    padding-bottom: 0px;
+    padding-top: 10px;
     color: #fff;
+    height: 70px;
 }
 .fixed-header{
     top: 0;
 }
 .fixed-footer{
     bottom: 0;
+    height: 50px !important;
 }
 .container{
     width: 100%;
@@ -72,25 +78,39 @@ display: inline-block;
     width: 70%;
     margin: 0 auto;
     height:100%;
-    background-color: antiquewhite;
-    position: relative;
+    background-color: blanchedalmond;
     
 }
 .bookCover{
-    width:30%;
+    width:25%;
     height:60%;
     display: inline-block;
-    background-color: aquamarine;
+    background-color: blanchedalmond;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     resize: horizontal;
-    vertical-align: top;
 }
 .bookTitle{
-    width:70%;
+    width:75%;
     height:60%;
     display: inline-block;
-    background-color:rebeccapurple;
+    background-color:blanchedalmond;
     float: right;
+    font-size: 800%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+
+}
+.bookSummary{
+    width:100%;
+    height:40%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 100%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
 
 }
