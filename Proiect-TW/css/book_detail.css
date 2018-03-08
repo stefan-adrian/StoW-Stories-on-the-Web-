@@ -1,0 +1,96 @@
+body{
+    padding-top: 45px;
+    padding-bottom: 30px;
+    margin:0px !important;
+}
+.fixed-header, .fixed-footer{
+    width: 100%;
+    position: fixed;
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+}
+.fixed-header{
+    top: 0;
+}
+.fixed-footer{
+    bottom: 0;
+}
+.container{
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+.container nav {
+    width: 33.33%;
+    height: 100%;
+}
+.container .centerHeader{
+    width: 33.33%;
+    z-index: 3;
+    height: 100%;
+}
+.container .rightHeader{
+    width:33.34%;
+    z-index: 3;
+    height: 100%;
+    text-align: right;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+
+.centerHeader form input:focus {
+    width: 100%;
+}
+
+.rightHeader a{
+color: #fff;
+text-decoration: none;
+padding: 7px 25px;
+display: inline-block;
+}
+.main {
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+.rightMenu{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    centered content;
+}
+.bookInfo{ 
+    width: 70%;
+    margin: 0 auto;
+    height:100%;
+    background-color: antiquewhite;
+    position: relative;
+    
+}
+.bookCover{
+    width:30%;
+    height:60%;
+    display: inline-block;
+    background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-size: cover;
+    resize: horizontal;
+    vertical-align: top;
+}
+.bookTitle{
+    width:70%;
+    height:60%;
+    display: inline-block;
+    background-color:rebeccapurple;
+    float: right;
+
+}
