@@ -27,6 +27,7 @@ body{
     margin: 0 0; /* Center the DIV horizontally */
     height: 100%;
     display : -webkit-inline-box;
+    position: relative;
 }
 .container nav {
     width: 33.33%;
@@ -36,12 +37,19 @@ body{
     width: 33.33%;
     z-index: 3;
     height: 100%;
+    position: relative;
 }
 .container .rightHeader{
     width:33.34%;
     z-index: 3;
     height: 100%;
     text-align: right;
+    font-size: 1.3em;
+    top: 50%;
+    margin-top: 5.5px;
+}
+ .rightHeader a:hover{
+    background-color: #9bbdf4;
 }
 nav a{
     color: #fff;
@@ -51,8 +59,19 @@ nav a{
 }
     
   .centerHeader form input:focus {
-        width: 100%;
+    border-color: #9bbdf4;
+    border: 3px;
     }
+  .centerHeader form input{
+      width: 100%;
+      border: none;
+      height: 30px;
+      text-align: center;
+      font-size: 1.5em;
+      position: absolute;
+      top: 50%;
+      margin-top: -1em;
+  }
 
 .rightHeader a{
     color: #fff;
@@ -78,14 +97,13 @@ nav a{
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
-    /*background-image: url(../28810094_1877656135642410_1701066503_o.jpg);*/
-    background-color: powderblue;
+  /*  background-image: url(../background.jpg);*/
+background-color:#29344c;
     background-position: center;
 }
 .rightMenu .imagine{
     height: 70%;
     width: 100%;
-    margin-bottom: -10px
 }
 .rightMenu img{
     height: 130px;
@@ -126,6 +144,10 @@ nav a{
 .text{
     text-align: center;
     width: 100%;
+    font-size: 1.6vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d9d9ef;
+    
 
 }
 .leftbox {
@@ -196,6 +218,18 @@ nav a{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  .stow{
+    width: 20%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    font-style: oblique;
+}
 
 .login-page {
   width: 360px;
