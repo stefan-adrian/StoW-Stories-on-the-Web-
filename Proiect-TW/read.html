@@ -41,15 +41,18 @@
                         
                         
                 </p>
+                <div class="bookmark2" id="bookmark1">
+                Marked
+                    </div>
             </div> 
-
+           
             <div class="goForward">
-                    <div class="bookMark">
+                    <button class="bookMark" onclick="myFunction()">
                     
                             Place
                             <br>Book-</br>
                             Mark
-                        </div>
+                    </button>
                  <div class="switchPageRight" style="background-image:url(right.png)">
                  </div>
             </div>
@@ -60,6 +63,11 @@
     <div class="fixed-footer">
         <div class="stow">StoW</div>
     </div>
+    <script>
+            function myFunction() {
+                document.getElementById("bookmark1").style.display = "block";
+            }
+            </script>
     </body>
     </head>
 </html>
