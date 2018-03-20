@@ -10,7 +10,7 @@ body{
 }
 .main {
     width: 100%;
-    margin: 0 0; /* Center the DIV horizontally */
+    margin: 0 0;
     display: -webkit-inline-box;
 }
 .rightMenu{
@@ -87,15 +87,11 @@ background-color:#E0E0E0;
     -ms-user-select: none;
     user-select: none;
   }
-  
-  /* Hide the browser's default checkbox */
   .leftbox input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
-  
-  /* Create a custom checkbox */
   .checkmark {
     position: absolute;
     top: 0;
@@ -104,30 +100,20 @@ background-color:#E0E0E0;
     width: 25px;
     background-color: #eee;
   }
-  
-  /* On mouse-over, add a grey background color */
   .leftbox:hover input ~ .checkmark {
     background-color: #ccc;
   }
-  
-  /* When the checkbox is checked, add a blue background */
   .leftbox input:checked ~ .checkmark {
     background-color: #2196F3;
   }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
-  
-  /* Show the checkmark when checked */
   .leftbox input:checked ~ .checkmark:after {
     display: block;
   }
-  
-  /* Style the checkmark/indicator */
   .leftbox .checkmark:after {
     left: 9px;
     top: 5px;
