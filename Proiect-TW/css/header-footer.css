@@ -77,6 +77,18 @@ nav a{
     display : -webkit-inline-box;
     position: relative;
 }
+.stow{
+    width: 20%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    font-style: oblique;
+}
 @media only screen and (max-width: 1256px) {
     .container .centerHeader{
         width: 40%;
@@ -111,7 +123,36 @@ nav a{
         font-size: 1.8vw;
     }
 }
+@media only screen and (max-width: 843px){
+    .container .rightHeader{
+        font-size: 1.7vw;
+    }
+}
 @media only screen and (max-device-width: 601px) {
+    .container .rightHeader{
+        width:49%;
+        font-size: 2.5vw;
+        margin-top: 23.5px;
+        text-align: right;
+    }
+    .container nav {
+        width: 27%;
+    }
+    .container .centerHeader {
+        width: 25%;
+    }
+    .fixed-header{
+        height: 100px;
+    }
+    .logo{
+        height: 100px;
+    }
+    .centerHeader form input{
+        height: 40px;
+        font-size: 2.7vw;
+    }
+}
+@media only screen and (max-width: 600px) {
     .container .rightHeader{
         width:49%;
         font-size: 2.5vw;
