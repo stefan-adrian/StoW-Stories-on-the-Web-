@@ -224,8 +224,8 @@ nav a{
 .rightMenu{
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-color:#E0E0E0;
+
 }
 .bookInfo{ 
     width: 70%;
@@ -268,9 +268,229 @@ nav a{
     
 }
 .bookMark{
-    width:4%;
+    width:18%;
     height:8%;
     background-color:orange;
     font-size: 100%;
-    float: right ;
+    float: left;
+}
+
+@media only screen and (max-width: 1600px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 4%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 4%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookMark{
+    
+        width:20%;
+        height:7%;
+        background-color:orange;
+        font-size: 70%;
+        float: left ;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+  
+    .bookMark{
+    
+        width:20%;
+        height:7%;
+        background-color:orange;
+        font-size: 90%;
+        float: left ;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+  
+    .bookMark{
+    
+        width:20%;
+        height:7%;
+        background-color:orange;
+        font-size: 80%;
+        float: left ;
+    }
+
+}
+@media only screen and (max-width: 380px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 1%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 1%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 50%;
+        
+    }
+}
+
+@media only screen and (max-device-width: 800px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookMark{
+    
+        width:40%;
+        height:7%;
+        background-color:orange;
+        font-size: 150%;
+        float: left ;
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 200%;
+        
+    }
+}
+@media only screen and (max-device-width: 590px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 240%;
+        
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookMark{
+    
+        width:40%;
+        height:7%;
+        background-color:orange;
+        font-size: 150%;
+        float: left ;
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 100%;
+        
+    }
+}
+@media only screen and (max-width: 590px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 50%;
+        
+    }
 }
