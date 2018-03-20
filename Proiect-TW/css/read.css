@@ -39,6 +39,7 @@ body{
     height: 8%;
     background-size: 100%;
     left:35%;
+    background-repeat: no-repeat;
     top:50%;
     position:absolute;
     
@@ -49,6 +50,7 @@ body{
     height: 8%;
     background-size: 100%;
     left:35%;
+    background-repeat: no-repeat;
     top:50%;
     position:absolute;
     
