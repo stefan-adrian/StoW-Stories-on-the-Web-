@@ -13,8 +13,7 @@ body{
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
-    centered content;
-    background-color:#E0E0E0;
+    background-color: #E0E0E0;
 }
 .bookInfo{ 
     width: 70%;
@@ -35,7 +34,7 @@ body{
 .bookTitle{
     width:75%;
     height:60%;
-    display: inline-block;
+    display: block;
     background-color:blanchedalmond;
     float: right;
     font-size: 800%;
@@ -64,7 +63,7 @@ body{
     .bookTitle{
         width:75%;
     height:40%;
-    display: inline-block;
+    display: block;
     background-color:blanchedalmond;
     position: static;
     float: right;
@@ -105,7 +104,7 @@ body{
     .bookTitle{
         width:100%;
     height:20%;
-    display: inline-block;
+    display: block;
     background-color:blanchedalmond;
     position: static;
     float: right;
@@ -151,7 +150,7 @@ body{
     .bookTitle{
         width:100%;
     height:20%;
-    display: inline-block;
+    display: block;
     background-color:blanchedalmond;
     position: static;
     float: right;
@@ -197,7 +196,7 @@ body{
     .bookTitle{
         width:100%;
     height:20%;
-    display: inline-block;
+    display: block;
     background-color:blanchedalmond;
     position: static;
     float: right;

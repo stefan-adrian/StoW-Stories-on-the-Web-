@@ -1,5 +1,11 @@
+html{
+  height: 100%;
+  width: 100%;
+}
 body{
     margin:0px;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -49,7 +55,7 @@ body{
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
