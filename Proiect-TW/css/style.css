@@ -96,10 +96,10 @@ background-color:#E0E0E0;
     width: 25px;
     background-color: #eee;
   }
-  .leftbox:hover input .checkmark {
+  .leftbox:hover input ~ .checkmark {
     background-color: #ccc;
   }
-  .leftbox input:checked .checkmark {
+  .leftbox input:checked ~ .checkmark {
     background-color: #2196F3;
   }
   .checkmark:after {
