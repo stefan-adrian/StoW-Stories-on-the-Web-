@@ -3,19 +3,24 @@ body{
     position: relative;
     background-color: #E0E0E0;
 }
+#content{
+    display: grid;
+    grid-template-columns : repeat(1,1fr);
+    margin: 0 auto;
+}
 .leftMenu{
-    width: 15%;
     background-color: black;
     color: white;
+    min-height: 595px;
 }
 .main {
     width: 100%;
     margin: 0 0;
-    display: -webkit-inline-box;
+    display: grid;
+    grid-template-columns: 10% 90%;
 }
 .rightMenu{
     z-index: -4;
-    width: 85%;
     background-repeat: no-repeat;
     background-size: 100%;
 background-color:#E0E0E0;
@@ -96,10 +101,10 @@ background-color:#E0E0E0;
     width: 25px;
     background-color: #eee;
   }
-  .leftbox:hover input .checkmark {
+  .leftbox:hover input ~ .checkmark {
     background-color: #ccc;
   }
-  .leftbox input:checked .checkmark {
+  .leftbox input:checked ~ .checkmark {
     background-color: #2196F3;
   }
   .checkmark:after {

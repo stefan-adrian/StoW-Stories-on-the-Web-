@@ -19,6 +19,7 @@
     bottom: 0;
     height: 50px !important;
     float: left;
+    position: absolute;
 }
 .container nav {
     width: 33.33%;
