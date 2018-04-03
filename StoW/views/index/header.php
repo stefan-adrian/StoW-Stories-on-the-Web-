@@ -1,3 +1,0 @@
-<html>
-Header
-<body>
