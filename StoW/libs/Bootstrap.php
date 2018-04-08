@@ -3,6 +3,7 @@
 class Bootstrap {
 
     function __construct() {
+        
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
         $url = explode('/', $url);
@@ -26,6 +27,7 @@ class Bootstrap {
         }
         
         $controller = new $url[0];
+        $controller->loadModel($url[0]);
         
         //calling methods
         if (isset($url[2])) {
