@@ -1,0 +1,17 @@
+Main Page Use Case: 
+
+  Dupa ce s-a inregistrat userul este dus pe pagina principala a site-ului. In pagina principala vor aparea toate 
+cartile pe care le contine site-ul. Userul are posibilitatea de a filtra cartile dupa anumite criterii sau poate 
+cauta o carte dupa nume. In urma filtrarii sau a cautarii, userul va fi dus pe o pagina cu cartile care corespund
+cerintelor lui iar acesta va selecta cartea pe care doreste sa o citeasca, sau va primi un mesaj "No result" in 
+cazul in care nicio carte nu indeplineste criteriile lui de selectare. Daca nu s-a gasit nicio carte , userul poate 
+introduce alte date de filtrare. De asemenea, userul poate selecta cartea pe care vrea sa o citeasca fara sa aplice
+vreun filtru si fara sa caute dupa un titlu anume. Dupa selectarea cartii userul va fi dus pe pagina cartii 
+respective. In aceasta pagina userul va alege daca vrea sa citeasca sau sa asculte cartea. 
+	In cazul in care userul alege optiunea de citire a cartii acesta va fi dus pe prima pagina a cartii pe care
+a ales-o. Pe pagina de citire userul va putea plasa un bookmark  sau va putea scimba pagina. In urma schimbarii 
+paginii userul va fi dus din nou pe o pagina de citire unde ii va fi afisata urmatoarea sau precedenta pagina din 
+carte, in functie de alegerea lui.
+	In cazul in care userul alege optiunea de ascultare a cartii va fi dus pe o pagina in care va fi afisat un
+audio player. In aceasta pagina userul are posibilitatea de a porni sau opri audio playerul si , de asemenea, va 
+putea plasa un bookmark care va salva in profilul sau personal minutul la care a ajuns din cartea audio.
