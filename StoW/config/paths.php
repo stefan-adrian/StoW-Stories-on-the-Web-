@@ -1,4 +1,4 @@
 <?php
 
-define('URL','http://localhost/StoW/');
 
+define('URL','http://localhost/StoW/');

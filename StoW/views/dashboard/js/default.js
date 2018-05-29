@@ -1,50 +1,37 @@
-$(function(){
-    
-    $.get('dashboard/xhrGetListings', function(o){
-        
-        for(var i=0;i<o.length;i++)
-        {
-            $('#listInserts').append('<div>' + o[i].text + '<a class="del" rel="'+ o[i].id +'" href="#">X<a> </div>');
-        }   
-        
-        
-        //$('.del').live('click',(function(){    VARIANTA ORIGINALA DAR NU MAI MERGE DEOARECE A FOST SCOASA FUNCTIA LIVE
-       
-        $('#listInserts').on('click', '.del', function(){    
-            delItem=$(this);
-            var id=$(this).attr('rel');
-            
-            
-       
-            $.post('dashboard/xhrDeleteListing',{'id': id},function(o){
-          
-                
-                delItem.parent().remove();
-             });
-       
-            return false;
-            });
-        
-    }, 'json');
-    
+$(function() {
+	
+	$.get('dashboard/xhrGetListings', function(o) {
+		
+		for (var i = 0; i < o.length; i++)
+		{
+			$('#listInserts').append('<div>' + o[i].text + '<a class="del" rel="'+o[i].id+'" href="#">X</a></div>');
+		}
+		
+		$('.del').live('click', function() {
+			delItem = $(this);
+			var id = $(this).attr('rel');
+			
+			$.post('dashboard/xhrDeleteListing', {'id': id}, function(o) {
+				delItem.parent().remove();
+			}, 'json');
+			
+			return false;
+		});
+		
+	}, 'json');
+	
+	
+	
+	$('#randomInsert').submit(function() {
+		var url = $(this).attr('action');
+		var data = $(this).serialize();
+		
+		$.post(url, data, function(o) {
+			$('#listInserts').append('<div>' + o.text + '<a class="del" rel="'+ o.id +'" href="#">X</a></div>');		
+		}, 'json');
+		
+		
+		return false;
+	});
 
-    
-   $('#randomInsert').submit(function(){
-      
-      var url=$(this).attr('action');
-       var data=$(this).serialize();
-       console.log(data);
-       
-       $.post(url,data,function(o){
-          
-          $('#listInserts').append('<div>' + o.text + '<a class="del" rel="'+ o.id +'" href="#">X<a> </div>');
-
-           
-       }, 'json');
-       
-       return false;
-   });
-   
-   
-   
 });
