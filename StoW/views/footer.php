@@ -1,7 +1,7 @@
 </div>
 
 <div id="footer">
-	(C) Footer
+	StoW
 </div>
 
 </body>

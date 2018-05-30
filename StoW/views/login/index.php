@@ -1,8 +1,20 @@
-<h1>Login</h1>
+<div>
+	<div class="login">
+        <div class="login-page">
+			<div class="loginForm">
+				<form action="login/run" method="post">  
+					<input class="loginData" type="text" name="login" /><br />
+					<input class="loginData" type="password" name="password" /><br />
+					<input class="loginButton" type="submit" value="Login" />
+				</form>
+				<p class="message">Not registered? <a href="<?php echo URL; ?>register">Create an account</a></p>
+			</div>
+        </div>
+	</div>
+</div>
 
-<form action="login/run" method="post">
-	
-	<label>Login</label><input type="text" name="login" /><br />
-	<label>Password</label><input type="password" name="password" /><br />
-	<label></label><input type="submit" />
-</form>
+
+
+
+
+
