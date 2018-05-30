@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
 	<link rel="stylesheet" href="<?php echo URL; ?>public/css/login.css" />
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/upload.css" />
+        <link rel="stylesheet" href="<?php echo URL; ?>public/css/book_detail.css" />
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
 	<?php
