@@ -5,9 +5,9 @@
 				<form action="register/create" method="post">  
 					<input class="loginData" type="text" name="username" placeholder="Username" /><br />
                     <input class="loginData" type="password" name="password" placeholder="Password" /><br />
-                    <input class="loginData" type="text" name="nume" placeholder="Nume" /><br />
-                    <input class="loginData" type="text" name="prenume" placeholder="Prenume" /><br />
-                    <input class="loginData" type="text" name="varsta" placeholder="Varsta" /><br />
+                    <input class="loginData" type="text" name="name" placeholder="Nume" /><br />
+                    <input class="loginData" type="text" name="surname" placeholder="Prenume" /><br />
+                    <input class="loginData" type="text" name="age" placeholder="Varsta" /><br />
                     <input class="loginData" type="text" name="email" placeholder="Email adress" /><br />
 					<input class="loginButton" type="submit" value="Create" />
 				</form>

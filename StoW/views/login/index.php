@@ -3,7 +3,7 @@
         <div class="login-page">
 			<div class="loginForm">
 				<form action="login/run" method="post">  
-					<input class="loginData" type="text" name="login" placeholder="Username" /><br />
+					<input class="loginData" type="text" name="username" placeholder="Username" /><br />
 					<input class="loginData" type="password" name="password" placeholder="Password" /><br />
 					<input class="loginButton" type="submit" value="Login" />
 				</form>

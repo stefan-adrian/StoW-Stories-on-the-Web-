@@ -10,12 +10,11 @@ class Login_Model extends Model
 	public function run()
 	{
 		$sth = $this->db->prepare("SELECT id, role FROM users WHERE 
-				login = :login AND password = MD5(:password)");
+				username = :username AND password = MD5(:password)");
 		$sth->execute(array(
-			':login' => $_POST['login'],
+			':username' => $_POST['username'],
 			':password' => $_POST['password']
 		));
-		
 		$data = $sth->fetch();
 		
 		$count =  $sth->rowCount();

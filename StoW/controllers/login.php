@@ -14,6 +14,7 @@ class Login extends Controller {
 	function run()
 	{
 		$this->model->run();
+
 	}
 	
 

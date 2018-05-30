@@ -9,18 +9,18 @@ class Register_Model extends Model
 	public function create($data)
 	{
 		$sth = $this->db->prepare('INSERT INTO users 
-			(`login`, `password`, `role` , `nume` , `prenume` , `varsta` , `email`) 
-			VALUES (:login, :password, :role, :nume, :prenume, :varsta, :email)
+			(`username`, `password`, `role` , `name` , `surname` , `age` , `email`) 
+			VALUES (:username, :password, :role, :name, :surname, :age, :email)
 			');
 		
 		$sth->execute(array(
-			':login' => $data['login'],
+			':username' => $data['username'],
 			':password' => $data['password'],
 			':role' => $data['role'],
-			':nume' => $data['nume'],
-			':prenume' => $data['prenume'],
-			':varsta' => $data['varsta'],
-			':email' => $data['email'],
+			':name' => $data['name'],
+			':surname' => $data['surname'],
+			':age' => $data['age'],
+			':email' => $data['email']
 
 		));
 	}
