@@ -5,7 +5,11 @@
 	<link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
 	<link rel="stylesheet" href="<?php echo URL; ?>public/css/login.css" />
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/upload.css" />
+
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/profile.css" />
+
+        <link rel="stylesheet" href="<?php echo URL; ?>public/css/book_detail.css" />
+
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
 	<?php
@@ -37,6 +41,8 @@
 		<?php endif; ?>
                 
                 <a href="<?php echo URL; ?>profile">Profile</a>	
+                
+                <a href="<?php echo URL; ?>book_detail">Book Detail</a>	
 		
 		<a href="<?php echo URL; ?>dashboard/logout">Logout</a>	
 	<?php else: ?>
