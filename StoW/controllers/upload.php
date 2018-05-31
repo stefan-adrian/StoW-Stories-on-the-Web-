@@ -12,4 +12,152 @@ class Upload extends Controller
     {	
 	$this->view->render('upload/index');
     }
+    
+    function checkValidity($data){
+		if(empty($data['bookName']) || empty($data['author']) || empty($data['year'])){
+			echo 'Empty fields.';
+			return 0;
+		}
+		if(!is_numeric($data['year'])){
+			$error = "Year field dosent respect the format!It must be numeric!";
+			echo $error;
+			return 0;
+		}
+		return 1;
+    }
+    
+    public function uploadImage()
+    {
+        
+        $target_dir = "public/bookImages/";
+        $target_file = $target_dir . basename($_FILES["bookImage"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+        
+            $check = getimagesize($_FILES["bookImage"]["tmp_name"]);
+            if($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+        
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["bookImage"]["size"] > 5000000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+            echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $uploadOk = 0;
+        }
+        
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["bookImage"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["bookImage"]["name"]). " has been uploaded.";
+                } else {
+            echo "Sorry, there was an error uploading your file.";
+                }
+        }
+        
+        
+        return $target_file;
+    }
+    
+    
+    public function uploadFile()
+    {
+        
+        $target_dir = "public/bookFiles/";
+        $target_file = $target_dir . basename($_FILES["paperBookLink"]["name"]);
+        $uploadOk = 1;
+        
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $uploadOk = 0;
+        }
+        /*// Check file size
+        if ($_FILES["paperBookLink"]["size"] > 5600000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }*/
+        
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["paperBookLink"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["paperBookLink"]["name"]). " has been uploaded.";
+                } else {
+            echo "Sorry, there was an error uploading your file.";
+                }
+        }
+        
+        return $target_file;
+    }
+    
+    
+    public function uploadAudio()
+    {
+        
+        $target_dir = "public/audioFiles/";
+        $target_file = $target_dir . basename($_FILES["audioBookLink"]["name"]);
+        $uploadOk = 1;
+        
+        
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["audioBookLink"]["size"] > 500000000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        
+        
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["audioBookLink"]["tmp_name"], $target_file)) {
+                echo "The file ". basename( $_FILES["audioBookLink"]["name"]). " has been uploaded.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+        
+        
+        return $target_file;
+    }
+
+    
+    public function create()
+    {
+        $data = array();
+	$data['bookName'] = $_POST['bookName'];
+        $data['year'] = $_POST['year'];
+	$data['author'] = $_POST['author'];
+        
+        $data['imageLink'] = $this->uploadImage();
+        $data['fileLink'] = $this->uploadFile();
+        $data['audioLink'] = $this->uploadAudio();
+        
+	if($this->checkValidity($data)){
+	$this->model->create($data);
+	header('location: ' . URL . 'upload');
+	}
+    }
+    
 }
