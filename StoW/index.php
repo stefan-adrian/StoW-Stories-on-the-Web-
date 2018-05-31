@@ -13,4 +13,6 @@ require 'libs/Session.php';
 require 'config/paths.php';
 require 'config/database.php';
 
+require "classes/User.php";
+
 $app = new Bootstrap();
