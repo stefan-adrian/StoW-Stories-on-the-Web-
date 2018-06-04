@@ -1,0 +1,380 @@
+body{
+    margin:0px !important;
+}
+
+.main {
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+.rightMenu{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #E0E0E0;
+}
+.bookInfo{ 
+    width: 70%;
+    margin: 0 auto;
+    height:100%;
+    background-color: blanchedalmond;
+    
+}
+.bookCover{
+    width:25%;
+    height:60%;
+    display: inline-block;
+    background-color: blanchedalmond;
+    background-repeat: no-repeat;
+    background-size: contain;
+    resize: horizontal;
+}
+.bookTitle{
+    width:75%;
+    height:60%;
+    display: block;
+    background-color:blanchedalmond;
+    float: right;
+    font-size: 800%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+
+}
+.bookSummary{
+    width:100%;
+    height:40%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 100%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+}
+
+
+
+@media only screen and (max-width: 1513px) {
+    
+    .bookTitle{
+        width:75%;
+    height:40%;
+    display: block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:40%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:25%;
+        height:40%;
+        display: inline-block;
+        background-color: blanchedalmond;
+        background-repeat: no-repeat;
+        background-size: contain;
+        resize: horizontal;
+    }
+
+}
+
+@media only screen and (max-device-width: 800px) {
+    
+    .bookTitle{
+        width:100%;
+    height:20%;
+    display: block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:20%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:30%;
+        height:30%;
+        
+        background-color: blanchedalmond;
+        
+        background-size: contain;
+    
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+    .bookTitle{
+        width:100%;
+    height:20%;
+    display: block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:20%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:30%;
+        height:30%;
+        
+        background-color: blanchedalmond;
+        
+        background-size: contain;
+    
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+@media only screen and (max-device-width: 550px) {
+    
+    .bookTitle{
+        width:100%;
+    height:20%;
+    display: block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:50%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:30%;
+        height:35%;
+        
+        background-color: blanchedalmond;
+        
+        background-size: contain;
+    
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-device-width: 500px) {
+    
+    .bookTitle{
+        width:100%;
+    height:20%;
+    display: inline-block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:50%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:40%;
+        height:35%;
+        
+        background-color: blanchedalmond;
+        
+        background-size: contain;
+    
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+@media only screen and (max-device-width: 400px) {
+    
+    .bookTitle{
+        width:100%;
+    height:20%;
+    display: inline-block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:50%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 200%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:40%;
+        height:35%;
+        
+        background-color: blanchedalmond;
+        
+        background-size: contain;
+    
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+@media only screen and (max-device-width: 350px) {
+    
+    .bookTitle{
+        width:100%;
+    height:10%;
+    display: inline-block;
+    background-color:blanchedalmond;
+    position: static;
+    float: right;
+    font-size: 400%;
+    font-style: oblique;
+    font-family: 'Gill Sans';
+    text-align: center;
+    text-decoration-color: beige;
+    }
+
+    .bookSummary{
+
+        width:100%;
+    height:50%;
+    background-color:blanchedalmond;
+    display: block; 
+    font-size: 230%;
+    font-style: oblique;
+    font-family: Georgia;
+    text-align:center;
+
+    }
+
+    .bookCover{
+        width:40%;
+        height:25%;
+        
+        background-color: blanchedalmond;
+        
+        background-size: contain;
+    
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}

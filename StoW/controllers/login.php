@@ -2,7 +2,8 @@
 
 class Login extends Controller {
 
-	function __construct() {
+	function __construct()
+        {
 		parent::__construct();	
 	}
 	
