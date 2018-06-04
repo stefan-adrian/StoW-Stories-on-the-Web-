@@ -11,21 +11,45 @@ class Register extends Controller {
 		$this->view->render('register/index');
 	}
 	function checkValidity($data){
-		if(empty($data['username']) || empty($data['password']) || empty($data['name'])|| empty($data['surname'])|| empty($data['age'])|| empty($data['email'])){
-			echo 'Campuri goale.';
-			return 0;
+		$ok=true;
+			Session::destroy();
+			Session::init();
+			if(empty($data['username'])){
+			Session::set('emptyUsername','1');
+			$ok=false;
 		}
-		if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-			$error = "Email invalid";
-			echo $error;
-			return 0;
-		}
-		if(!is_numeric($data['age'])){
-			$error = "Varsta nu este in formatul care trebuie";
-			echo $error;
-			return 0;
-		}
-		return 1;
+			else Session::set('emptyUsername',$data['username']);
+			if(empty($data['password'])){
+			Session::set('emptyPassword','2');
+			$ok=false;
+			}
+			else Session::set('emptyPassword',$data['password']);
+			if(empty($data['name'])){
+			Session::set('emptyName','3');
+			$ok=false;
+			}
+			else Session::set('emptyName',$data['name']);
+			if(empty($data['surname'])){
+			Session::set('emptySurname','4');
+			$ok=false;
+			}
+			else Session::set('emptySurname',$data['surname']);
+			if(empty($data['age']) || !is_numeric($data['age'])){
+			Session::set('emptyAge','5');
+			$ok=false;
+			}
+			else if(is_numeric($data['age'])) {Session::set('emptyAge',$data['age']);}
+			if(empty($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
+				Session::set('emptyEmail','6');
+				$ok=false;
+			}
+			else if(filter_var($data['email'], FILTER_VALIDATE_EMAIL)) Session::set('emptyEmail',$data['email']);
+			if($ok==false){
+			header('location: ' . URL . 'register');
+			return $ok;
+			}
+			else
+			return $ok;
 	}
 	public function create() 
 	{
