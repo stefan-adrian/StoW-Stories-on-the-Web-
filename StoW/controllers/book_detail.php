@@ -1,6 +1,6 @@
 <?php
 
-class book_detail extends Controller
+class Book_detail extends Controller
 {
     function __construct()
     {
@@ -10,5 +10,10 @@ class book_detail extends Controller
     function index()
     {
         $this->view->render('book_detail/index');
+    }
+    
+    function run()
+    {
+        $this->model->run();
     }
 }

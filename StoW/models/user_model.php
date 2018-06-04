@@ -9,14 +9,14 @@ class User_Model extends Model
 
 	public function userList()
 	{
-		$sth = $this->db->prepare('SELECT id, login, role FROM users');
+		$sth = $this->db->prepare('SELECT id, username, role FROM users');
 		$sth->execute();
 		return $sth->fetchAll();
 	}
 	
 	public function userSingleList($id)
 	{
-		$sth = $this->db->prepare('SELECT id, login, role FROM users WHERE id = :id');
+		$sth = $this->db->prepare('SELECT id, username, role FROM users WHERE id = :id');
 		$sth->execute(array(':id' => $id));
 		return $sth->fetch();
 	}
@@ -24,12 +24,12 @@ class User_Model extends Model
 	public function create($data)
 	{
 		$sth = $this->db->prepare('INSERT INTO users 
-			(`login`, `password`, `role`) 
-			VALUES (:login, :password, :role)
+			(`username`, `password`, `role`) 
+			VALUES (:username, :password, :role)
 			');
 		
 		$sth->execute(array(
-			':login' => $data['login'],
+			':username' => $data['username'],
 			':password' => $data['password'],
 			':role' => $data['role']
 		));
@@ -38,14 +38,14 @@ class User_Model extends Model
 	public function editSave($data)
 	{
 		$sth = $this->db->prepare('UPDATE users
-			SET `login` = :login, `password` = :password, `role` = :role
+			SET `username` = :username, `password` = :password, `role` = :role
 			WHERE id = :id
 			');
 		
 		$sth->execute(array(
 			':id' => $data['id'],
-			':login' => $data['login'],
-			':password' => md5($data['password']),
+			':username' => $data['username'],
+			':password' => $data['password'],
 			':role' => $data['role']
 		));
 	}

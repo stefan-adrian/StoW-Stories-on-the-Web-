@@ -25,7 +25,7 @@ class User extends Controller {
 	public function create() 
 	{
 		$data = array();
-		$data['login'] = $_POST['login'];
+		$data['username'] = $_POST['username'];
 		$data['password'] = md5($_POST['password']);
 		$data['role'] = $_POST['role'];
 		
@@ -45,7 +45,7 @@ class User extends Controller {
 	{
 		$data = array();
 		$data['id'] = $id;
-		$data['login'] = $_POST['login'];
+		$data['username'] = $_POST['username'];
 		$data['password'] = md5($_POST['password']);
 		$data['role'] = $_POST['role'];
 		
