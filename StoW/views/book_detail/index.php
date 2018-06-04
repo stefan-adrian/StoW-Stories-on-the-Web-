@@ -1,39 +1,29 @@
+<?php
 
-    <div class="main">
+$thisBook=Session::get('thisBook');
+
+?>
+
+
+    <div >
         <div class="rightMenu">
 
 
             <div class="bookInfo">
-                <div class="bookCover" style="background-color:red">
-                    
+                <div class="bookCover" style="background-image:url(images/Origin.jpg)">
+                
                 </div>
                 <div class="bookTitle">
+                    <br>
+                    <b>Titlu:</b>   <?php echo $thisBook->getName()  ?>
+                    <br/>
+                    
                 </div>
                 <div class="bookSummary">
-                    <br>
-                        An aparitie: 2017
-                    <br/>
-                    <br>
-                        Autor: Dan Brown
-                    <br/>
-                      <br>
-                    Categoria: Literatura Universala
-                    <br/>
-                    <br>
-                          Editie: Cartonata
-                    <br/>
-                    <br>
-                     Editura: RAO
-                    <br/>
-                    <br>
-                    Format: 240 x 160 mm
-                    <br/>
-                    <br>
-                       Nr. pagini: 600
-                    <br/>
                 </div>
+            
             </div> 
-
-
         </div>
     </div>
+
+

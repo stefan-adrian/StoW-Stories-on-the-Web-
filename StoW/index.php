@@ -14,5 +14,6 @@ require 'config/paths.php';
 require 'config/database.php';
 
 require "classes/User.php";
+require "classes/Book.php";
 
 $app = new Bootstrap();
