@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/profile.css" />
 
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/book_detail.css" />
+        
+        <link rel="stylesheet" href="<?php echo URL; ?>public/css/read.css" />
 
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
@@ -41,6 +43,8 @@
 		<?php endif; ?>
                 
                 <a href="<?php echo URL; ?>profile">Profile</a>	
+                
+                <a href="<?php echo URL; ?>read">ReadBook</a>	
                 
                 <a href="<?php echo URL; ?>book_detail">Book Detail</a>	
 		
