@@ -3,6 +3,7 @@
 
 $bookName=Session::get('bookName');
 $me=Session::get('me');
+$page=Session::get('page');
 
 ?>
 
@@ -32,8 +33,11 @@ $me=Session::get('me');
                     <b>Age:</b> <?php echo $me->getAge()  ?>
                     <br/>
                     <br>
-                    <b>Book:</b>  <?php echo $bookName     //aici o sa se adauge linkul la adresa cartii ca referinta ?>  
+                    <b>Book:</b> <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" style=color:black;> <?php echo $bookName  ?> </a> 
                     <br/>
+                    
+                    
+                    
                 </P>
             </div>
      </div>

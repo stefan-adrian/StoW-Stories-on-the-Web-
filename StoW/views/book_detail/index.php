@@ -4,6 +4,8 @@ $thisBook=Session::get('thisBook');
 $characters=Session::get('characters');
 $description=Session::get('description');
 
+$page=Session::get('page');
+
 ?>
 
 
@@ -11,7 +13,7 @@ $description=Session::get('description');
 
         <div class="center">
     
-            <a href="<?php echo URL; ?>read?page=<?php 1 //aici va trebui adaugat bookmarkul ?>" class="previous">   Read Boook  </a>
+            <a href="<?php echo URL; ?>read?page=<?php echo $page //aici va trebui adaugat bookmarkul ?>" class="previous">   Read Boook  </a>
     
         </div>
 
@@ -19,7 +21,7 @@ $description=Session::get('description');
         <div class="title">
             
             <br/>
-            <b>Title:</b>  <a href="<?php echo URL; ?>read?page=<?php 1 //aici va trebui adaugat bookmarkul ?>" style=color:black;>   <?php echo $thisBook->getName()  ?>   </a>
+            <b>Title:</b>  <a href="<?php echo URL; ?>read?page=<?php echo $page //aici va trebui adaugat bookmarkul ?>" style=color:black;>   <?php echo $thisBook->getName()  ?>   </a>
             <br/>
             <b>Author:</b>  <?php echo $thisBook->getAuthor() ?>
             <br/> <br/> <br/>

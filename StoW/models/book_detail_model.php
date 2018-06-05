@@ -11,7 +11,7 @@ class Book_Detail_Model extends Model
     public function run()
     {
      $sth = $this->db->prepare("SELECT * FROM books WHERE 
-				id=3"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte
+				id=1"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte
      
      $sth->execute();
      $data = $sth->fetch();
@@ -32,11 +32,8 @@ class Book_Detail_Model extends Model
                         $book->setPhotoLink($data['photoLink']);
                         
                         Session::set('thisBook',$book);
-                        Session::set('page',1);//va trebuie pus bookmarkul cartii care o sa il initializam mereu cu 1
                         
-                        
-                        Session::init();
-                        
+                        //citire din fisier
                         $xml=simplexml_load_file($data['paperBookLink']);
                         $text=(string)$xml->text;
                         $characters=(string)$xml->characters;
@@ -46,6 +43,22 @@ class Book_Detail_Model extends Model
                         Session::set('description',$description);
                         $numberOfPages=(int)((strlen($text)/5000)+1);
                         Session::set('numberOfPages',$numberOfPages);
+                        
+                        
+                        $me=Session::get('me');
+                        $page=1;
+                        if($me->getIdBookmark()!=NULL)
+                        {
+                            $idBookmark=$me->getIdBookmark();
+                            $sth2 = $this->db->query("SELECT page FROM bookmarks
+                                                    WHERE id=$idBookmark");
+
+                            $sth2->execute();
+                            $data2 = $sth2->fetch();
+                    
+                            $page=$data2['page'];
+                        }
+                        Session::set('page',$page);
                         
 			
 			//header('location: ../dashboard');

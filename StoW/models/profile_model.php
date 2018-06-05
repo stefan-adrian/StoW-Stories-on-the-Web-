@@ -24,6 +24,11 @@ class Profile_Model extends Model
                     $data = $sth->fetch();
                     Session::set('bookName',$data['name']);
                     
+                    $page=$data['page'];
+                    
+                    Session::set('page',$page);
+                    
+                    
                 }
 
                 
