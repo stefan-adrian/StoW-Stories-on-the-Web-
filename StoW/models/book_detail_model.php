@@ -11,7 +11,7 @@ class Book_Detail_Model extends Model
     public function run()
     {
      $sth = $this->db->prepare("SELECT * FROM books WHERE 
-				id=1");
+				id=1"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte
      
      $sth->execute();
      $data = $sth->fetch();
@@ -32,6 +32,14 @@ class Book_Detail_Model extends Model
                         $book->setPhotoLink($data['photoLink']);
                         
                         Session::set('thisBook',$book);
+                        Session::set('page',1);//va trebuie pus bookmarkul cartii care o sa il initializam mereu cu 1
+                        
+                        
+                        Session::init();
+                        
+                        $xml=simplexml_load_file($data['paperBookLink']);
+                        $text=(string)$xml->text;
+                        Session::set('text',$text);
                         
 			
 			//header('location: ../dashboard');

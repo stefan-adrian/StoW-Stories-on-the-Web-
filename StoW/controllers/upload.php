@@ -13,18 +13,6 @@ class Upload extends Controller
 	$this->view->render('upload/index');
     }
     
-    function checkValidity($data){
-		if(empty($data['bookName']) || empty($data['author']) || empty($data['year'])){
-			echo 'Empty fields.';
-			return 0;
-		}
-		if(!is_numeric($data['year'])){
-			$error = "Year field dosent respect the format!It must be numeric!";
-			echo $error;
-			return 0;
-		}
-		return 1;
-    }
     
     public function uploadImage()
     {
@@ -146,18 +134,28 @@ class Upload extends Controller
     public function create()
     {
         $data = array();
-	$data['bookName'] = $_POST['bookName'];
-        $data['year'] = $_POST['year'];
-	$data['author'] = $_POST['author'];
+        
+	//$data['bookName'] = $_POST['bookName'];
+        //$data['year'] = $_POST['year'];
+	//$data['author'] = $_POST['author'];
+        
         
         $data['imageLink'] = $this->uploadImage();
         $data['fileLink'] = $this->uploadFile();
         $data['audioLink'] = $this->uploadAudio();
         
-	if($this->checkValidity($data)){
+        //$url = $data['fileLink']; // path to your JSON file
+        //$data2 = file_get_contents($url); // put the contents of the file into a variable
+        //$book = json_decode($data2); // decode the JSON feed
+        
+        $xml=simplexml_load_file($data['fileLink']);
+        $data['bookName'] = $xml->bookName;
+        $data['year'] = $xml->year;
+	$data['author'] = $xml->author;
+        
+        
 	$this->model->create($data);
 	header('location: ' . URL . 'upload');
-	}
     }
     
 }

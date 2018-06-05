@@ -10,12 +10,14 @@ $thisBook=Session::get('thisBook');
 
 
             <div class="bookInfo">
-                <div class="bookCover" style="background-image:url(images/Origin.jpg)">
+                <div class="bookCover" style="background-image:url(public/images/Origin.jpg)">
                 
                 </div>
                 <div class="bookTitle">
                     <br>
-                    <b>Titlu:</b>   <?php echo $thisBook->getName()  ?>
+                    <b>Titlu:</b> <a href="<?php echo URL; ?>read?page=<?php 1 //aici va trebui adaugat bookmarkul ?>">   <?php echo $thisBook->getName()  ?>  </a>
+                    
+                    
                     <br/>
                     
                 </div>
