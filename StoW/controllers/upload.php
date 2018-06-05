@@ -154,6 +154,8 @@ class Upload extends Controller
 	$data['author'] = $xml->author;
         
         
+        
+        
 	$this->model->create($data);
 	header('location: ' . URL . 'upload');
     }

@@ -19,6 +19,7 @@ class Read_Model extends Model
             parse_str( parse_url( $url, PHP_URL_QUERY), $array );
             if($array['page'] != null)
             {   
+                
                 $page=$array['page'];
                 Session::set('page',$page);
                 

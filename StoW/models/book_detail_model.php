@@ -39,7 +39,13 @@ class Book_Detail_Model extends Model
                         
                         $xml=simplexml_load_file($data['paperBookLink']);
                         $text=(string)$xml->text;
+                        $characters=(string)$xml->characters;
+                        $description=(string)$xml->description;
                         Session::set('text',$text);
+                        Session::set('characters',$characters);
+                        Session::set('description',$description);
+                        $numberOfPages=(int)((strlen($text)/5000)+1);
+                        Session::set('numberOfPages',$numberOfPages);
                         
 			
 			//header('location: ../dashboard');
