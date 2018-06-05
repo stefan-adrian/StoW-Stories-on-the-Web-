@@ -5,6 +5,8 @@ $characters=Session::get('characters');
 $description=Session::get('description');
 
 $page=Session::get('page');
+$thread1=Session::get('thread1');
+$thread2=Session::get('thread2');
 
 ?>
 
@@ -12,8 +14,10 @@ $page=Session::get('page');
     <div >
 
         <div class="center">
-    
-            <a href="<?php echo URL; ?>read?page=<?php echo $page //aici va trebui adaugat bookmarkul ?>" class="previous">   Read Boook  </a>
+            <a href="<?php echo URL; ?>read?page=<?php echo 1;  ?>" class="previous">   Start Book  </a>
+            <?php if ($page!=1):  ?>
+            <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" class="previous">   Resume Book  </a>
+            <?php endif; ?>
     
         </div>
 
@@ -21,7 +25,7 @@ $page=Session::get('page');
         <div class="title">
             
             <br/>
-            <b>Title:</b>  <a href="<?php echo URL; ?>read?page=<?php echo $page //aici va trebui adaugat bookmarkul ?>" style=color:black;>   <?php echo $thisBook->getName()  ?>   </a>
+            <b>Title:</b>  <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" style=color:black;>   <?php echo $thisBook->getName()  ?>   </a>
             <br/>
             <b>Author:</b>  <?php echo $thisBook->getAuthor() ?>
             <br/> <br/> <br/>
@@ -36,7 +40,7 @@ $page=Session::get('page');
             <br/> <br/> <br/>
             <b>Year:</b>   <?php echo $thisBook->getYear()  ?>
             <br><br/>
-            <b>Threads:</b>   <?php echo $thisBook->getThread()  ?>
+            <b>Threads:</b>   <?php echo $thread1; echo', '; echo $thread2;  ?>
             <br><br/>
             <b>Characters:</b>   <?php echo $characters  ?>
             <br><br/>

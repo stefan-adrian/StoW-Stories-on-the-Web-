@@ -59,8 +59,8 @@ class Read_Model extends Model
 	{
             
             Session::init();
-            $text=Session::get('text');
             $page=Session::get('page');
+            $thread=Session::get('thread');
             
             $url=$_SERVER['REQUEST_URI'];
             parse_str( parse_url( $url, PHP_URL_QUERY), $array );
@@ -72,6 +72,14 @@ class Read_Model extends Model
                 
             }
             
+            if (array_key_exists("thread",$array)==1)
+            {   
+                
+                $thread=$array['thread'];
+                Session::set('thread',$thread);
+                
+            }
+            
             
             if (array_key_exists("bookmarkSetted",$array)==1)
             {   
@@ -80,7 +88,27 @@ class Read_Model extends Model
                 
             }
             
-            $pageText=substr($text,($page-1)*5000,5000);
+            
+            if($thread==0)
+            {
+                $text=Session::get('text');
+                $pageText=substr($text,($page-1)*5000,5000);
+            }
+            else if($thread==1)
+            {
+                $numberOfPages=Session::get('numberOfPagesThread1');
+                Session::set('numberOfPages',$numberOfPages);
+                $text=Session::get('thread1Text');
+                $pageText=substr($text,($page-1)*5000,5000);
+            }
+            else if($thread==2)
+            {
+                $numberOfPages=Session::get('numberOfPagesThread2');
+                Session::set('numberOfPages',$numberOfPages);
+                $text=Session::get('thread2Text');
+                $pageText=substr($text,($page-1)*5000,5000);
+            }
+            
             
             
             Session::set('pageText',$pageText);

@@ -38,11 +38,26 @@ class Book_Detail_Model extends Model
                         $text=(string)$xml->text;
                         $characters=(string)$xml->characters;
                         $description=(string)$xml->description;
+                        $thread1=(string)$xml->thread1;
+                        $thread2=(string)$xml->thread2;
+                        $thread1Text=(string)$xml->thread1Text;
+                        $thread2Text=(string)$xml->thread2Text;
+                        $thread=0;
                         Session::set('text',$text);
                         Session::set('characters',$characters);
                         Session::set('description',$description);
+                        Session::set('thread1',$thread1);
+                        Session::set('thread2',$thread2);
+                        Session::set('thread1Text',$thread1Text);
+                        Session::set('thread2Text',$thread2Text);
+                        Session::set('thread',$thread);
                         $numberOfPages=(int)((strlen($text)/5000)+1);
+                        Session::set('numberOfPagesMainThread',$numberOfPages);
                         Session::set('numberOfPages',$numberOfPages);
+                        $numberOfPagesThread1=(int)((strlen($thread1Text)/5000)+1);
+                        Session::set('numberOfPagesThread1',$numberOfPagesThread1);
+                        $numberOfPagesThread2=(int)((strlen($thread2Text)/5000)+1);
+                        Session::set('numberOfPagesThread2',$numberOfPagesThread2);
                         
                         
                         $me=Session::get('me');
@@ -55,8 +70,12 @@ class Book_Detail_Model extends Model
 
                             $sth2->execute();
                             $data2 = $sth2->fetch();
-                    
-                            $page=$data2['page'];
+                            
+                            $count2=$sth2->rowCount();
+                            if($count2>0)
+                            {
+                                $page=$data2['page'];
+                            }
                         }
                         Session::set('page',$page);
                         

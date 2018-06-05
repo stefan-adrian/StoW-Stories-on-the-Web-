@@ -25,6 +25,13 @@ $numberOfPages=Session::get('numberOfPages');
     
     <div class="center">
     <br/>
+    
+    <?php if ($page==$numberOfPages&&Session::get('thread')==0&&Session::get('thread1')!=NULL):  ?>
+    <a href="<?php echo URL; ?>read?page=1&thread=1" class="previous"> <?php echo Session::get('thread1') ?> </a>
+    <a href="<?php echo URL; ?>read?page=1&thread=2?>" class="previous"> <?php echo Session::get('thread2') ?> </a>    
+    <br/><br/>
+    <?php endif; ?>
+    
     <a href="#" class="next">Page <?php echo ($page)?> of <?php echo ($numberOfPages)?></a>  <br/>
     
     </div>
