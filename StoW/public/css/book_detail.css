@@ -20,3 +20,8 @@
     background-color: purple;
 display: inline-block;
 }
+
+a.title {
+    background-color: green;
+    color: black;
+}
