@@ -27,7 +27,7 @@ $description=Session::get('description');
         
         <div  class="cover" >
             
-            <img src="<?php echo $thisBook->getPhotoLink(); ?>" alt="Book Image">
+            <img src="<?php echo $thisBook->getPhotoLink(); ?>" alt="Book Image" style='height: 100%; width: 100%; object-fit: contain'>
         </div> 
     
         <div class="description">
