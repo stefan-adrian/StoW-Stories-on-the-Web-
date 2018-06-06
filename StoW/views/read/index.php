@@ -18,8 +18,8 @@ $numberOfPages=Session::get('numberOfPages');
     
     </div>
     
-    <div class="a">
-        <?php  echo $pageText ?>
+    <div style="font-size:200%;" >
+        <p style="font-family:'Comic Sans MS';">  <?php  echo $pageText ?> </p>
    
     </div>
     

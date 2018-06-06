@@ -41,7 +41,7 @@ class Profile_Model extends Model
                     Session::set('characters',$characters);
                     Session::set('description',$description);
                     Session::set('thread',$thread);
-                    $numberOfPages=(int)((strlen($text)/5000)+1);
+                    $numberOfPages=(int)((strlen($text)/1400)+1);
                     Session::set('numberOfPages',$numberOfPages);
                     
                     

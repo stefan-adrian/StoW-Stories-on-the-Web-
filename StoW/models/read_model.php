@@ -92,21 +92,21 @@ class Read_Model extends Model
             if($thread==0)
             {
                 $text=Session::get('text');
-                $pageText=substr($text,($page-1)*5000,5000);
+                $pageText=substr($text,($page-1)*1400,1400);
             }
             else if($thread==1)
             {
                 $numberOfPages=Session::get('numberOfPagesThread1');
                 Session::set('numberOfPages',$numberOfPages);
                 $text=Session::get('thread1Text');
-                $pageText=substr($text,($page-1)*5000,5000);
+                $pageText=substr($text,($page-1)*1400,1400);
             }
             else if($thread==2)
             {
                 $numberOfPages=Session::get('numberOfPagesThread2');
                 Session::set('numberOfPages',$numberOfPages);
                 $text=Session::get('thread2Text');
-                $pageText=substr($text,($page-1)*5000,5000);
+                $pageText=substr($text,($page-1)*1400,1400);
             }
             
             

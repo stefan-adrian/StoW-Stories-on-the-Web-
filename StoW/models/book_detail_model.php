@@ -51,12 +51,12 @@ class Book_Detail_Model extends Model
                         Session::set('thread1Text',$thread1Text);
                         Session::set('thread2Text',$thread2Text);
                         Session::set('thread',$thread);
-                        $numberOfPages=(int)((strlen($text)/5000)+1);
+                        $numberOfPages=(int)((strlen($text)/1400)+1);
                         Session::set('numberOfPagesMainThread',$numberOfPages);
                         Session::set('numberOfPages',$numberOfPages);
-                        $numberOfPagesThread1=(int)((strlen($thread1Text)/5000)+1);
+                        $numberOfPagesThread1=(int)((strlen($thread1Text)/1400)+1);
                         Session::set('numberOfPagesThread1',$numberOfPagesThread1);
-                        $numberOfPagesThread2=(int)((strlen($thread2Text)/5000)+1);
+                        $numberOfPagesThread2=(int)((strlen($thread2Text)/1400)+1);
                         Session::set('numberOfPagesThread2',$numberOfPagesThread2);
                         
                         
