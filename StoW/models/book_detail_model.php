@@ -11,7 +11,7 @@ class Book_Detail_Model extends Model
     public function run()
     {
      $sth = $this->db->prepare("SELECT * FROM books WHERE 
-				id=1"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte
+				id=3"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte
      
      $sth->execute();
      $data = $sth->fetch();

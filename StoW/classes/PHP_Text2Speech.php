@@ -125,7 +125,8 @@ class PHP_Text2Speech {
                 $text = urlencode($text);
 
                 // Download new file
-                $this->download("http://translate.google.com/translate_tts?ie=UTF-8&q={$text}&tl={$this->lang}&total={$this->wordCount}&idx=0&textlen={$this->textLen}", $file);
+                $this->download("http://api.voicerss.org/?key=58f97c4fc12344639e08936b95e31995&hl=en-us&src=Hello, world!
+", $file);
             }
         } 
          

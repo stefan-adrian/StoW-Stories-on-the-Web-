@@ -3,9 +3,8 @@ Session::init();
 $pageText=Session::get('pageText');
 $page=Session::get('page');
 $numberOfPages=Session::get('numberOfPages');
-include 'classes/PHP_Text2Speech.php';
 
-$t2s = new PHP_Text2Speech;
+
 ?>
 
 <div> 
@@ -37,8 +36,26 @@ $t2s = new PHP_Text2Speech;
     <a href="#" class="next">Page <?php echo ($page)?> of <?php echo ($numberOfPages)?></a>  <br/>
     
     </div>
+    
+    
+    <a href="#" class="say" style="color:black">Read this for me!</a>
+    
+    <audio src="" class="speech" hidden></audio>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            $('a.say').on('click',function(e){
+                e.preventDefault();
 
- <audio controls="controls" autoplay="autoplay">
-  <source src="<?php echo $t2s->speak('What are you looking at? Wipe that face off your head.'); ?>" type="audio/mp3" />
-</audio>
+                var text =<?php echo json_encode($pageText); ?>;
+                text=text.substring(0,1400);
+                var url = "http://api.voicerss.org/?key=58f97c4fc12344639e08936b95e31995&hl=en-ca&r=1&src="+ text;
+                $('audio').attr('src',url).get(0).play();
+       
+            });
+        });
+    </script>
+    
 </div>
