@@ -1,6 +1,6 @@
 <?php
 
-class Book_Detail_Model extends Model
+class Book_Detail_Edit_Model extends Model
 {
     public function __construct()
     {
@@ -11,7 +11,7 @@ class Book_Detail_Model extends Model
     public function run()
     {
         
-
+            echo 'asta e editul';
 
             $sth = $this->db->prepare("SELECT * FROM books WHERE 
                 			id=3"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte

@@ -17,7 +17,7 @@ class Register extends Controller {
 			if(empty($data['username'])){
 			Session::set('emptyUsername','1');
 			$ok=false;
-		}
+                        }
 			else Session::set('emptyUsername',$data['username']);
 			if(empty($data['password'])){
 			Session::set('emptyPassword','2');

@@ -21,8 +21,8 @@
 		echo '<td>' . $value['username'] . '</td>';
 		echo '<td>' . $value['role'] . '</td>';
 		echo '<td>
-				<a href="'.URL.'user/edit/'.$value['id'].'">Edit</a> 
-				<a href="'.URL.'user/delete/'.$value['id'].'">Delete</a></td>';
+				<a href="'.URL.'user/edit/'.$value['id'].'" style=color:black;>Edit</a> 
+				<a href="'.URL.'user/delete/'.$value['id'].'" style=color:black;>Delete</a></td>';
 		echo '</tr>';
 	}
 ?>
