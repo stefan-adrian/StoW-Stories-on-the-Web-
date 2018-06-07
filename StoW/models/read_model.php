@@ -13,8 +13,10 @@ class Read_Model extends Model
             $me=Session::get('me');
             $idUser=$me->getId();
             $sth=$this->db->prepare("DELETE FROM bookmarks
-                                    WHERE idUser=$idUser");
-            $sth->execute();
+                                    WHERE idUser=:idUser");
+           	$sth->execute(array(
+			':idUser' => $idUser
+		));
             
             
         }
@@ -36,18 +38,25 @@ class Read_Model extends Model
 		));
             
             
-            $sth2 = $this->db->query("SELECT id FROM bookmarks
-                                            WHERE idUser = $idUser and idBook=$idBook and page=$page");
+            $sth2 = $this->db->prepare("SELECT id FROM bookmarks
+                                            WHERE idUser = :idUser and idBook=:idBook and page=:page");
 
-            $sth2->execute();
+            $sth2->execute(array(
+			':idUser' => $idUser,
+                        ':idBook' => $idBook,
+                        ':page' => $page
+                    ));
             $data = $sth2->fetch();
                     
             $idBookmark=$data['id'];
             
             $sth3=$this->db->prepare("UPDATE users
-                                    SET idBookmark=$idBookmark
-                                    WHERE id=$idUser");
-            $sth3->execute();
+                                    SET idBookmark=:idBookmark
+                                    WHERE id=:idUser");
+            $sth3->execute(array(
+                ':idBookmark'=>$idBookmark,
+                ':idUser'=>$idUser
+            ));
             
             $me->setIdBookmark($idBookmark);
             Session::set('me',$me);
