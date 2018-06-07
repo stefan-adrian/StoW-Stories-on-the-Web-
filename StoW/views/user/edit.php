@@ -1,11 +1,5 @@
 <h1>User: Edit</h1>
 
-<?php
-print_r($this->user);
-
-
-?>
-
 <form method="post" action="<?php echo URL;?>user/editSave/<?php echo $this->user['id']; ?>">
 	<label>Username</label><input type="text" name="username" value="<?php echo $this->user['username']; ?>" /><br />
 	<label>Password</label><input type="text" name="password" /><br />

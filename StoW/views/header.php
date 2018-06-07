@@ -33,11 +33,10 @@
 <div id="header">
 
 	<?php if (Session::get('loggedIn') == false):?>
-		<a href="<?php echo URL; ?>index">Index</a>
-		<a href="<?php echo URL; ?>help">Help</a>
+		<a href="<?php echo URL; ?>index">Home</a>
 	<?php endif; ?>	
 	<?php if (Session::get('loggedIn') == true):?>
-		<a href="<?php echo URL; ?>dashboard">Dashboard</a>
+		<a href="<?php echo URL; ?>index">Home</a>
 		
 		<?php if (Session::get('role') == 'admin'):?>
 		<a href="<?php echo URL; ?>user">Users</a>
@@ -45,12 +44,10 @@
                 
 		<?php endif; ?>
                 
-                <a href="<?php echo URL; ?>profile">Profile</a>	
-                
-                <a href="<?php echo URL; ?>index">Home</a>	
+                <a href="<?php echo URL; ?>profile">Profile</a>	           
                 
 		
-		<a href="<?php echo URL; ?>dashboard/logout">Logout</a>	
+		<a href="<?php echo URL; ?>index/logout">Logout</a>	
 	<?php else: ?>
 		<a href="<?php echo URL; ?>login">Login</a>
 	<?php endif; ?>

@@ -1,20 +1,22 @@
-<?php if(Session::get('loggedIn') == true)
-{
-  echo 'ceva';
-}
+<?php
+$search=Session::get('search');
+if($search == 1)
+$bookList=Session::get('bookList2');
 else
-  echo 'da';
+$bookList=Session::get('bookList');
+
 ?>
-        <form action="index/search" method="post">
-                        <input type="text" name="cauta" placeholder="Search">
+        <form class="search" action="index/search" method="post">
+          <input class type="text" name="cauta" placeholder="Search">
         </form>
 <?php
-  foreach($this->bookList as $key => $value) { ?>
+  foreach($bookList as $key => $value) { ?>
        <div class="imagine">
         <a href="<?php echo URL; ?>book_detail?idBook=<?php echo $value['id'];   ?>"> <?php echo '<img src='.$value['photoLink'].' alt='.$value['name'].'>'; ?></a>
 <?php
   ?>
   <span><?php echo $value['name']; ?></span></div>
     <?php
+    Session::set('search',0);
   }
 ?>
