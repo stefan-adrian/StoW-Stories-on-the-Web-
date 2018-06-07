@@ -22,6 +22,10 @@ class Book_detail_edit extends Controller
 	$data['ageCategory'] = $_POST['ageCategory'];
 	$data['description'] = $_POST['description'];
 
-        $this->model->run();
+        $this->model->run($data);
+        Session::init();
+        $thisBook=Session::get('thisBook');
+        $id=$thisBook->getId();
+        header('location: ' . URL . 'book_detail?idBook='.$id);
     }
 }
