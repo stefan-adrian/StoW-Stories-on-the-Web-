@@ -78,7 +78,7 @@ class Book_Detail_Model extends Model
                         if($me->getIdBookmark()!=NULL)
                         {
                             $idBookmark=$me->getIdBookmark();
-                            $sth2 = $this->db->query("SELECT page FROM bookmarks
+                            $sth2 = $this->db->prepare("SELECT page FROM bookmarks
                                                     WHERE id=:idBookmark");
                             
                 
