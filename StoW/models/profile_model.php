@@ -16,11 +16,14 @@ class Profile_Model extends Model
                 $bookmark=$me->getIdBookmark();
                 
                 if($bookmark!=NULL){
-                    $sth = $this->db->query("SELECT * FROM bookmarks
+                    $sth = $this->db->prepare("SELECT * FROM bookmarks
                                             JOIN books on idBook=books.id 
-                                            WHERE bookmarks.id = $bookmark");
+                                            WHERE bookmarks.id =:bookmark");
 
-                    $sth->execute();
+           	$sth->execute(array(
+			':bookmark' => $bookmark
+		));
+            
                     $data = $sth->fetch();
                     Session::set('bookName',$data['name']);
                     
