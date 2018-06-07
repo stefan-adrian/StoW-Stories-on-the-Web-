@@ -10,7 +10,9 @@ class Book_Detail_Edit_Model extends Model
     
     public function run()
     {
-            
+        Session::init();
+        $thisBook=Session::get('thisBook');
+        echo $thisBook->getPapaerBookLink();
         
         /*
             $sth = $this->db->prepare("SELECT * FROM books WHERE 

@@ -51,6 +51,7 @@ $thread2=Session::get('thread2');
             <?php if (Session::get('role') == 'admin'):?>
                 <a href="<?php echo URL; ?>book_detail_edit" class="previous">   Edit Book  </a>
             <?php endif; ?>
+                <br/><br/>
         </div>
              
     </div>
