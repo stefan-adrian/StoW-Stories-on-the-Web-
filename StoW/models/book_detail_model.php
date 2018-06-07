@@ -21,9 +21,12 @@ class Book_Detail_Model extends Model
             }
 
             $sth = $this->db->prepare("SELECT * FROM books WHERE 
-                			id= $idBook"); 
-     
-            $sth->execute();
+                			id= :idBook"); 
+                
+		$sth->execute(array(
+			':idBook' => $idBook
+		));
+
             $data = $sth->fetch();
             $book = new Book($data['id']);
             $count =  $sth->rowCount();
@@ -76,9 +79,13 @@ class Book_Detail_Model extends Model
                         {
                             $idBookmark=$me->getIdBookmark();
                             $sth2 = $this->db->query("SELECT page FROM bookmarks
-                                                    WHERE id=$idBookmark");
+                                                    WHERE id=:idBookmark");
+                            
+                
+                             $sth2->execute(array(
+                                 ':idBookmark' => $idBookmark
+                             ));
 
-                            $sth2->execute();
                             $data2 = $sth2->fetch();
                             
                             $count2=$sth2->rowCount();
