@@ -127,7 +127,7 @@ class Upload extends Controller
         
         if(Session::get('uploadImageOk')==1&&Session::get('uploadFileOk')==1)
         {
-            echo 'am ajuns unde nu trebuia';
+            
             $xml=simplexml_load_file($data['fileLink']);
             $data['bookName'] = $xml->bookName;
             $data['year'] = $xml->year;
@@ -135,7 +135,7 @@ class Upload extends Controller
             $data['ageCategory']=$xml->ageCategory;
         
             $this->model->create($data);
-            //header('location: ' . URL . 'upload');
+            header('location: ' . URL . 'upload');
         }
     }
     
