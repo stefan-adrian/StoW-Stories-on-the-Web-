@@ -11,10 +11,17 @@ class Book_Detail_Model extends Model
     public function run()
     {
         
-
+            $url=$_SERVER['REQUEST_URI'];
+            parse_str( parse_url( $url, PHP_URL_QUERY), $array );
+            if (array_key_exists("idBook",$array)==1)
+            {   
+                
+                $idBook=$array['idBook'];
+                
+            }
 
             $sth = $this->db->prepare("SELECT * FROM books WHERE 
-                			id=3"); //va trebuie schimbat 1 cu id-ul cartii care va fi cumva trimis cand dai click pe carte
+                			id= $idBook"); 
      
             $sth->execute();
             $data = $sth->fetch();

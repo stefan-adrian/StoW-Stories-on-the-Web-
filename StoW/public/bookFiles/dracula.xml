@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <note>
 
-<bookName>It</bookName>
-<author>Stephen King</author>
+<bookName>Dracula</bookName>
+<author>Bram stoker</author>
 <year>1990</year>
 <characters>It,Ben</characters>
 <description>A horror book about a creature called it.</description>
-<ageCategory>10</ageCategory>
+<ageCategory>20</ageCategory>
 
 <text>
 Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. So when they were old enough, she sent them out into the world to seek their fortunes.

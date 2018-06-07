@@ -46,9 +46,8 @@
                 
                 <a href="<?php echo URL; ?>profile">Profile</a>	
                 
-                <a href="<?php echo URL; ?>read">ReadBook</a>	
+                <a href="<?php echo URL; ?>index">Home</a>	
                 
-                <a href="<?php echo URL; ?>book_detail">Book Detail</a>	
 		
 		<a href="<?php echo URL; ?>dashboard/logout">Logout</a>	
 	<?php else: ?>

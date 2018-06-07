@@ -11,7 +11,7 @@ else
 <?php
   foreach($this->bookList as $key => $value) { ?>
        <div class="imagine">
-        <a href="book_detail.html"><?php echo '<img src='.$value['photoLink'].' alt='.$value['name'].'>'; ?></a>
+        <a href="<?php echo URL; ?>book_detail?idBook=<?php echo $value['id'];   ?>"> <?php echo '<img src='.$value['photoLink'].' alt='.$value['name'].'>'; ?></a>
 <?php
   ?>
   <span><?php echo $value['name']; ?></span></div>
