@@ -7,6 +7,7 @@ $description=Session::get('description');
 $page=Session::get('page');
 $thread1=Session::get('thread1');
 $thread2=Session::get('thread2');
+$idBook=Session::get('idBook');
 
 ?>
 
@@ -15,7 +16,7 @@ $thread2=Session::get('thread2');
 
         <div class="center">
             <a href="<?php echo URL; ?>read?page=<?php echo 1;  ?>" class="previous">   Start Book  </a>
-            <?php if ($page!=1):  ?>
+            <?php if ($page!=1 && $thisBook->getId()== $idBook):  ?>
                 <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" class="previous">   Resume Book  </a>
             <?php endif; ?>
            

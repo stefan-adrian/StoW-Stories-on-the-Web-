@@ -28,6 +28,8 @@ class Index extends Controller {
 	}
 	function logout()
 	{
+                Session::init();
+                Session::Set('loggedIn',false);
 		Session::destroy();
 		header('location: ' . URL .  'login');
 		exit;

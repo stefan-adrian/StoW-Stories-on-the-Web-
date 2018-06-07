@@ -78,7 +78,7 @@ class Book_Detail_Model extends Model
                         if($me->getIdBookmark()!=NULL)
                         {
                             $idBookmark=$me->getIdBookmark();
-                            $sth2 = $this->db->prepare("SELECT page FROM bookmarks
+                            $sth2 = $this->db->prepare("SELECT page,idBook FROM bookmarks
                                                     WHERE id=:idBookmark");
                             
                 
@@ -92,7 +92,9 @@ class Book_Detail_Model extends Model
                             if($count2>0)
                             {
                                 $page=$data2['page'];
+                                Session::set('idBook',$data2['idBook']);
                             }
+                            
                         }
                         Session::set('page',$page);
                         
