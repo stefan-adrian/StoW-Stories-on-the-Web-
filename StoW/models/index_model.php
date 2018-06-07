@@ -5,20 +5,29 @@ class Index_Model extends Model
 {
 	public function __construct()
 	{
+
 		parent::__construct();
     }
     public function bookList()
     {
-		
-		$sth = $this->db->prepare("SELECT * FROM books");
+		Session::init();
+		$me=Session::get('me');
+		$age=$me->getAge();
+		$sth = $this->db->prepare("SELECT * FROM books where ageCategory<=$age");
 
 		$sth->execute();
-		return $sth->fetchAll();
+		$data=$sth->fetchAll();
+		Session::set('bookList',$data);
     }
     
     public function search(){
-		$sth = $this->db->prepare("SELECT *  FROM books where name like '%".$_POST['cauta']."%' ");
+		Session::init();
+		$me=Session::get('me');
+		$age=$me->getAge();
+		$sth = $this->db->prepare("SELECT *  FROM books where name like '%".$_POST['cauta']."%' and ageCategory<=$age ");
 		$sth->execute();
-		return $sth->fetchAll();
+		$data= $sth->fetchAll();
+		Session::set('bookList2',$data);
+		Session::set('search',1);
     }
 }

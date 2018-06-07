@@ -7,7 +7,7 @@ class Index extends Controller {
 	}
 	
 	function index() {
-		$this->view->bookList = $this->model->bookList();
+		$this->model->bookList();
 		$this->view->render('index/index');
 		
 	}
@@ -17,14 +17,20 @@ class Index extends Controller {
 	}
 	function search(){
 		if($_POST['cauta']==NULL){
-			$this->view->bookList=$this->model->bookList();
-			$this->view->render('index/index');}
+			$this->model->bookList();
+			header('location: ../index');}
 			else {
-				$this->view->bookList=$this->model->search();
-				$this->view->render('index/index');
+				$this->model->search();		
+				header('location: ../index');
 				
 			}
 
+	}
+	function logout()
+	{
+		Session::destroy();
+		header('location: ' . URL .  'login');
+		exit;
 	}
 	
 }
