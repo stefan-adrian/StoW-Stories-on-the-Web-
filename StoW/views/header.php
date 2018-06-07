@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/profile.css" />
 
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/book_detail.css" />
+        <link rel="stylesheet" href="<?php echo URL; ?>public/css/book_detail_edit.css" />
         
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/read.css" />
 

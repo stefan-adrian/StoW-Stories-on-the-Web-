@@ -13,21 +13,15 @@ $thread2=Session::get('thread2');
 
     <div >
 
-        <div class="center">
-            <a href="<?php echo URL; ?>read?page=<?php echo 1;  ?>" class="previous">   Start Book  </a>
-            <?php if ($page!=1):  ?>
-                <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" class="previous">   Resume Book  </a>
-            <?php endif; ?>
-           
-        </div>
+       
 
-        
+        <form action="book_detail_edit/run" method="post">
         <div class="title">
             
             <br/>
-            <b>Title:</b>  <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" style=color:black;>   <?php echo $thisBook->getName()  ?>   </a>
+            <b>Title:</b>   <input type="text" name="bookTitle" value="<?php echo $thisBook->getName()  ?>  " >  
             <br/>
-            <b>Author:</b>  <?php echo $thisBook->getAuthor() ?>
+            <b>Author:</b>  <input type="text" name="author" value="<?php echo $thisBook->getAuthor() ?>  " > 
             <br/> <br/> <br/>
         </div>
         
@@ -38,20 +32,20 @@ $thread2=Session::get('thread2');
     
         <div class="description">
             <br/> <br/> <br/>
-            <b>Year:</b>   <?php echo $thisBook->getYear()  ?>
+            <b>Year:</b> <input type="text" name="year" value="<?php echo $thisBook->getYear()  ?>  " >  
             <br><br/>
-            <b>Threads:</b>   <?php echo $thread1; echo', '; echo $thread2;  ?>
+            <b>Threads:</b> <?php echo $thread1; echo', '; echo $thread2;  ?>    
             <br><br/>
-            <b>Characters:</b>   <?php echo $characters  ?>
+            <b>Characters:</b> <input type="text" name="characters" value="<?php echo $characters  ?>  " >  
             <br><br/>
-            <b>Age category:</b>   <?php echo $thisBook->getAgeCategory() ?>
+            <b>Age category:</b> <input type="text" name="ageCategory" value="<?php echo $thisBook->getAgeCategory() ?>  " >  
             <br><br/>
-            <b>Description:</b>  <?php echo $description  ?>
+            <b>Description:</b> <input type="text" name="description" value="<?php echo $description  ?>  " > 
             <br><br/>
-            <?php if (Session::get('role') == 'admin'):?>
-                <a href="<?php echo URL; ?>book_detail?edit=<?php echo 1  ?>" class="previous">   Edit Book  </a>
-            <?php endif; ?>
+            <input class="saveButton" type="submit" value="Save" />
+            
         </div>
+        </form>
              
     </div>
 

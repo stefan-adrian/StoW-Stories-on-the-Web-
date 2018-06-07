@@ -14,6 +14,14 @@ class Book_detail_edit extends Controller
     
     function run()
     {
+        $data = array();
+	$data['bookTitle'] = $_POST['bookTitle'];
+        $data['author'] = $_POST['author'];
+	$data['year'] = $_POST['year'];
+	$data['characters'] = $_POST['characters'];
+	$data['ageCategory'] = $_POST['ageCategory'];
+	$data['description'] = $_POST['description'];
+
         $this->model->run();
     }
 }
