@@ -40,6 +40,7 @@
 		
 		<?php if (Session::get('role') == 'admin'):?>
 		<a href="<?php echo URL; ?>user">Users</a>
+                <a href="<?php echo URL; ?>books_edit">Books</a>
                 <a href="<?php echo URL; ?>upload">Upload</a>
                 
 		<?php endif; ?>

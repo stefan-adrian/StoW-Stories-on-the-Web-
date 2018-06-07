@@ -96,6 +96,7 @@ class Book_Detail_Model extends Model
                         }
                         Session::set('page',$page);
                         
+                         
 			
 			//header('location: ../dashboard');
 		} else {

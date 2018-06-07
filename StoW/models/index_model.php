@@ -30,11 +30,18 @@ class Index_Model extends Model
 		Session::init();
 		$me=Session::get('me');
 		$age=$me->getAge();
-		$sth = $this->db->prepare("SELECT *  FROM books where name like '%".$_POST['cauta']."%' and ageCategory<=:age ");
+		$sth = $this->db->prepare("SELECT *  FROM books where name like :cauta and ageCategory<=:age ");
                 
+                $ch='%';
+                $cauta=$ch.$_POST['cauta'].$ch;
+                    
 		$sth->execute(array(
-			':age' => $age
+			':age' => $age,
+                        ':cauta' => $cauta
 		));
+                
+                
+                
 
                 
                 
