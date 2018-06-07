@@ -12,6 +12,8 @@
         
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/read.css" />
 
+		<link rel="stylesheet" href="<?php echo URL; ?>public/css/index.css" />
+
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
 	<?php
