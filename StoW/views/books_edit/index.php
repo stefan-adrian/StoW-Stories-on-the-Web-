@@ -1,6 +1,12 @@
 <h1>Books Edit&Delete</h1>
 <table>
 <?php
+        echo '<tr>';
+		echo '<td>' . 'Id' . '</td>';
+		echo '<td>' . 'Name' . '</td>';
+		echo '<td>' . 'Author' . '</td>';
+        echo '</tr>';       
+        
 	foreach($this->bookList as $key => $value) {
 		echo '<tr>';
 		echo '<td>' . $value['id'] . '</td>';

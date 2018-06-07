@@ -31,9 +31,7 @@
 <?php Session::init(); ?>
 	
 <div id="header">
-	<?php if (Session::get('loggedIn') == true):?>
-		<a href="<?php echo URL; ?>index">Home</a>
-	<?php endif; ?>	
+	
 	<?php if (Session::get('loggedIn') == true):?>
 		<a href="<?php echo URL; ?>index">Home</a>
 		

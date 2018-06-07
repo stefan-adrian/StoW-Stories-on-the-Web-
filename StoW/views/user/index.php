@@ -15,6 +15,11 @@
 <h1>Edit&Delete</h1>
 <table>
 <?php
+        echo '<tr>';
+		echo '<td>' . 'Id' . '</td>';
+		echo '<td>' . 'Username' . '</td>';
+		echo '<td>' . 'Role' . '</td>';
+        echo '</tr>';
 	foreach($this->userList as $key => $value) {
 		echo '<tr>';
 		echo '<td>' . $value['id'] . '</td>';
