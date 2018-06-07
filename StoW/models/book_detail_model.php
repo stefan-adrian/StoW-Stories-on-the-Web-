@@ -28,8 +28,8 @@ class Book_Detail_Model extends Model
                         $book->setAuthor($data['author']);
                         $book->setThread($data['thread']);
                         $book->setPaperBookLink($data['paperBookLink']);
-                        $book->setAudioBookLink($data['audioBookLink']);
                         $book->setPhotoLink($data['photoLink']);
+                        $book->setAgeCategory($data['ageCategory']);
                         
                         Session::set('thisBook',$book);
                         
@@ -83,7 +83,7 @@ class Book_Detail_Model extends Model
 			//header('location: ../dashboard');
 		} else {
 			//header('location: ../login');
-                    echo "Eroare baza de date";
+                    echo "Eroare baza de date.Cartea nu exista.";
 		}
     }
     

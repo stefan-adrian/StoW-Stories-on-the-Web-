@@ -95,66 +95,22 @@ class Upload extends Controller
     }
     
     
-    public function uploadAudio()
-    {
-        
-        $target_dir = "public/audioFiles/";
-        $target_file = $target_dir . basename($_FILES["audioBookLink"]["name"]);
-        $uploadOk = 1;
-        
-        
-        // Check if file already exists
-        if (file_exists($target_file)) {
-            
-            $uploadOk = 0;
-        }
-        // Check file size
-        if ($_FILES["audioBookLink"]["size"] > 500000000) {
-            echo "Sorry, your file is too large.";
-            $uploadOk = 0;
-        }
-        
-        
-        if ($uploadOk == 0) {
-            echo "Sorry, your file was not uploaded.";
-            // if everything is ok, try to upload file
-        } else {
-            if (move_uploaded_file($_FILES["audioBookLink"]["tmp_name"], $target_file)) {
-                echo "The file ". basename( $_FILES["audioBookLink"]["name"]). " has been uploaded.";
-            } else {
-                echo "Sorry, there was an error uploading your file.";
-            }
-        }
-        
-        
-        return $target_file;
-    }
+    
 
     
     public function create()
     {
         $data = array();
         
-	//$data['bookName'] = $_POST['bookName'];
-        //$data['year'] = $_POST['year'];
-	//$data['author'] = $_POST['author'];
-        
-        
         $data['imageLink'] = $this->uploadImage();
         $data['fileLink'] = $this->uploadFile();
-        $data['audioLink'] = $this->uploadAudio();
         
-        //$url = $data['fileLink']; // path to your JSON file
-        //$data2 = file_get_contents($url); // put the contents of the file into a variable
-        //$book = json_decode($data2); // decode the JSON feed
         
         $xml=simplexml_load_file($data['fileLink']);
         $data['bookName'] = $xml->bookName;
         $data['year'] = $xml->year;
 	$data['author'] = $xml->author;
-        
-        
-        
+        $data['ageCategory']=$xml->ageCategory;
         
 	$this->model->create($data);
 	header('location: ' . URL . 'upload');

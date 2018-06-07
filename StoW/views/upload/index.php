@@ -9,8 +9,7 @@
                             
                             Book File
                             <input type="file" name="paperBookLink" >
-                            Book Audio
-                            <input type="file" name="audioBookLink" accept="audio/*">
+                            
                             Book Image
                             <input type="file" name="bookImage" accept="image/*">
                             <button type="submit">submit</button>

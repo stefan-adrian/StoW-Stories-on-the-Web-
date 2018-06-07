@@ -13,15 +13,15 @@ class Upload_Model extends Model
         
         
         $sth = $this->db->prepare('INSERT INTO books 
-                                (`name`, `year`, `author`,`paperBookLink`,`audioBookLink`,`photoLink`) 
-                                VALUES (:name, :year, :author,:paperBookLink,:audioBookLink, :photoLink)
+                                (`name`, `year`, `author`,`paperBookLink`,`ageCategory`,`photoLink`) 
+                                VALUES (:name, :year, :author,:paperBookLink, :ageCategory, :photoLink)
                                 ');
         $sth->execute(array(
 			':name' => $data['bookName'],
 			':year' => $data['year'],
 			':author' => $data['author'],
                         ':paperBookLink' => $data['fileLink'],
-                        ':audioBookLink' => $data['audioLink'],
+                        ':ageCategory' => $data['ageCategory'],
                         ':photoLink' => $data['imageLink']
                         
                         ));

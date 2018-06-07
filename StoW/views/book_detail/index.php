@@ -44,7 +44,8 @@ $thread2=Session::get('thread2');
             <br><br/>
             <b>Characters:</b>   <?php echo $characters  ?>
             <br><br/>
-            
+            <b>Age category:</b>   <?php echo $thisBook->getAgeCategory() ?>
+            <br><br/>
             <b>Description:</b>  <?php echo $description  ?>
             <br><br/>
         </div>

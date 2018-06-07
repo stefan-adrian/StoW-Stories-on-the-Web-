@@ -10,7 +10,17 @@ class Book {
     private $paperBookLink;
     private $audioBookLink;
     private $photoLink;
+    private $ageCategory;
     
+    function getAgeCategory() {
+        return $this->ageCategory;
+    }
+
+    function setAgeCategory($ageCategory) {
+        $this->ageCategory = $ageCategory;
+    }
+
+        
     function __construct($id) {
         $this->id = $id;
     }
