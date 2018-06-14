@@ -35,6 +35,8 @@ class Index_Model extends Model
                 $ch='%';
                 $cauta=$ch.$_POST['cauta'].$ch;
                     
+                $cauta=htmlspecialchars($cauta);
+		
 		$sth->execute(array(
 			':age' => $age,
                         ':cauta' => $cauta
