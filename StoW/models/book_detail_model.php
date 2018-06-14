@@ -39,7 +39,6 @@ class Book_Detail_Model extends Model
                         $book->setYear($data['year']);
                         $book->setName($data['name']);
                         $book->setAuthor($data['author']);
-                        $book->setThread($data['thread']);
                         $book->setPaperBookLink($data['paperBookLink']);
                         $book->setPhotoLink($data['photoLink']);
                         $book->setAgeCategory($data['ageCategory']);
