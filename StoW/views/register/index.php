@@ -26,6 +26,7 @@
 	</div>
 </div>
 <?php
+echo Session::get('ceva');
  ?>
 
 

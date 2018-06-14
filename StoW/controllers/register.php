@@ -14,9 +14,9 @@ class Register extends Controller {
 		$ok=true;
 			Session::destroy();
 			Session::init();
-			if(empty($data['username'])){
+			$ok=$this->model->userExist();
+			if(empty($data['username']) || $ok==false){
 			Session::set('emptyUsername','1');
-			$ok=false;
                         }
 			else Session::set('emptyUsername',$data['username']);
 			if(empty($data['password'])){

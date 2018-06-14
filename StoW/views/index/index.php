@@ -10,8 +10,13 @@ $bookList=Session::get('bookList');
           <input class type="text" name="cauta" placeholder="Search">
         </form>
         <?php if($search == 1){ ?>
-         <span> Rezultatele cautarii: </span>
-        <?php echo Session::get('searchText'); } ?>
+         <span> Rezultatele cautarii </span>
+        <?php echo Session::get('searchText'); echo ': ';
+        if($bookList == NULL) { echo 'Nu s-au gasit rezultate'; }
+        else {
+         echo count($bookList);
+        }} ?>
+        <div class="carti">
 <?php
   foreach($bookList as $key => $value) { ?>
        <div class="imagine">
@@ -21,5 +26,5 @@ $bookList=Session::get('bookList');
   <span><?php echo $value['name']; ?></span></div>
     <?php
     Session::set('search',0);
-  }
-?>
+  } ?>
+</div>
