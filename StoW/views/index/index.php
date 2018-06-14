@@ -9,6 +9,9 @@ $bookList=Session::get('bookList');
         <form class="search" action="index/search" method="post">
           <input class type="text" name="cauta" placeholder="Search">
         </form>
+        <?php if($search == 1){ ?>
+         <span> Rezultatele cautarii: </span>
+        <?php echo Session::get('searchText'); } ?>
 <?php
   foreach($bookList as $key => $value) { ?>
        <div class="imagine">

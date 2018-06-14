@@ -48,5 +48,6 @@ class Index_Model extends Model
                 $data= $sth->fetchAll();
 		Session::set('bookList2',$data);
 		Session::set('search',1);
+		Session::set('searchText',$_POST['cauta']);
     }
 }
