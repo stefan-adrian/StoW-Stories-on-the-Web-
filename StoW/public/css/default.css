@@ -44,14 +44,7 @@ form {
 	font: 100% verdana,arial,sans-serif;
 }
 
-form label { 
-	display: block;
-	float: left; 
-	width: 150px; 
-	padding: 0; 
-	margin: 9px 0 0;
-	text-align: right; 
-}
+
 
 form input, form select {
 	width: auto;

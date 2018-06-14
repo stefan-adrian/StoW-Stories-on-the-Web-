@@ -24,6 +24,8 @@
   }
  .imagine a img{
       width: 60%;
+      max-height: 300px;
+
   }
  .imagine span{
       font-size: 26px;
