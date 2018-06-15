@@ -33,7 +33,9 @@ $page=Session::get('page');
                     <b>Age:</b> <?php echo $me->getAge()  ?>
                     <br/>
                     <br>
+                    <?php if ($me->getIdBookmark()!=NULL):?>
                     <b>Book:</b> <a href="<?php echo URL; ?>read?page=<?php echo $page  ?>" style=color:black;> <?php echo $bookName  ?> </a> 
+                    <?php endif; ?>
                     <br/>
                     
                     
