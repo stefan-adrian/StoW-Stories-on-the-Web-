@@ -1,0 +1,74 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/read.css">
+        <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+        <meta charset="UTF-8">
+        <title>StoW</title>
+    </head>
+    <body>
+        <div class="fixed-header">
+            <div class="container">
+                <nav>
+                        <a href="index.html"><img class="logo" alt="logo" src="logo.png"></a>
+                </nav>
+                <div class="centerHeader">
+                    <form>
+                        <input type="text" name="search" placeholder="Search">
+                      </form>
+                </div>
+                <div class="rightHeader">
+                    <a href="index.html">Home</a>
+                    <a href="upload.html">Upload</a>
+                    <a href="profile.html">Profil</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    <div class="main">
+        <div class="rightMenu" >
+
+
+            <div class ="goBack">
+                <div class="switchPageLeft" style="background-image:url(left.png)">
+                </div>
+            </div>
+
+            <div class="bookInfo">
+                
+                <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                        
+                        
+                </p>
+                <div class="bookmark2" id="bookmark1">
+                Marked
+                    </div>
+            </div> 
+           
+            <div class="goForward">
+                    <button class="bookMark" onclick="myFunction()">
+                    
+                            Place
+                            <br>Book-<br/>
+                            Mark
+                    </button>
+                 <div class="switchPageRight" style="background-image:url(right.png)">
+                 </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="fixed-footer">
+        <div class="stow">StoW</div>
+    </div>
+    <script>
+            function myFunction() {
+                document.getElementById("bookmark1").style.display = "block";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Admin:
+	Administratorul paginii web are cele mai multe drepturi dintre toti utilizatorii.El are o pagina
+        separta prin care poate sa incarce carti pe site, sa stearga carti si sa stearga utilizatori.

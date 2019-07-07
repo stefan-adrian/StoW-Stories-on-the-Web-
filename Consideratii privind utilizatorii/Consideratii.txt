@@ -1,0 +1,7 @@
+	Aplicatia se adreseaza copiilor care doresc sa citeasca povesti. De asemenena, aplicatia se 
+adreseaza si parintilor care au copii mici si care doresc sa aiba mereu la indemana o poveste pe care sa le-o
+poata citi copilului lor. Posibilitatea de a asculta o poveste, in locul citirii acesteia, va
+face ca aplicatia sa fie una atractiva si pentru copiii care nu stiu inca sa citeasca dar care sunt incantati sa
+asculte o poveste.
+	Asadar, aplicatia are ca tipuri de utilizatori atat copii dornici sa descopere povesti noi cat si parinti
+care au nevoie de inspiratie in momentul in care trebuie sa isi incante copilul prin relatarea unei povestioare.

@@ -1,0 +1,55 @@
+.saveButton{
+    font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4d8add;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.main {
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+
+.title{
+    width:100%;
+    height:30%;
+
+    display: inline-block;
+    font-size: 200%;
+    font-family: cursive ;
+    float:right;
+    text-align: center;
+}
+.description{
+    width:100%;
+    height:30%;
+    display: inline-block;
+
+    
+}
+.cover{
+    width:300px;;
+    height:400px;
+    background-size:fill;
+display: inline-block;
+}
+
+a.title {
+    background-color: green;
+    color: black;
+}
+.cover img{
+    max-height: 100%;
+    max-height: 100%;
+}

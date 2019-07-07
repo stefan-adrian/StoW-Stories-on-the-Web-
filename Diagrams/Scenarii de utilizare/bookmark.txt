@@ -1,0 +1,3 @@
+Bookmark:
+	Un user logat poate sa intre pe profilul personal si de acolo poate vedea toate semnele de carte pe care le are.
+	El are de ales intre a citi cartea sau a asculta povestea in format audio.

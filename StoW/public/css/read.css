@@ -1,0 +1,337 @@
+
+
+
+div.a {
+        font-size: large;
+
+
+}
+
+.center {
+    text-align: center;
+    
+}
+
+.centered {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color: #4d8add;
+    color: black;
+}
+
+.next {
+    background-color: #4d8add;
+    color: black;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+
+
+.main {
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+.rightMenu{
+    width: 100%;
+    height: 100%;
+    background-color:#E0E0E0;
+
+}
+.bookInfo{ 
+    width: 70%;
+    height:100%;
+    float:left;
+    background-color: blanchedalmond;
+    font-size: 200%;
+    
+}
+.goBack{
+    width: 15%;
+    height:100%;
+    float: left;
+    position: relative;
+
+}
+.goForward{
+    float: left;
+    width: 15%;
+    position: relative;
+    height:100%;
+}
+.switchPageLeft{
+    width: 30%;
+    height: 8%;
+    background-size: 100%;
+    left:35%;
+    background-repeat: no-repeat;
+    top:50%;
+    position:absolute;
+    
+}
+
+.switchPageRight{
+    width: 30%;
+    height: 8%;
+    background-size: 100%;
+    left:35%;
+    background-repeat: no-repeat;
+    top:50%;
+    position:absolute;
+    
+}
+.bookMark{
+    width:18%;
+    height:8%;
+    background-color:orange;
+    font-size: 100%;
+    float: left;
+}
+
+@media only screen and (max-width: 1600px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 4%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 4%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookMark{
+    
+        width:20%;
+        height:7%;
+        background-color:orange;
+        font-size: 70%;
+        float: left ;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+  
+    .bookMark{
+    
+        width:20%;
+        height:7%;
+        background-color:orange;
+        font-size: 90%;
+        float: left ;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+  
+    .bookMark{
+    
+        width:20%;
+        height:7%;
+        background-color:orange;
+        font-size: 80%;
+        float: left ;
+    }
+
+}
+@media only screen and (max-width: 380px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 1%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 1%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 50%;
+        
+    }
+}
+
+@media only screen and (max-device-width: 800px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookMark{
+    
+        width:40%;
+        height:7%;
+        background-color:orange;
+        font-size: 150%;
+        float: left ;
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 200%;
+        
+    }
+}
+@media only screen and (max-device-width: 590px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 240%;
+        
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 3%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookMark{
+    
+        width:40%;
+        height:7%;
+        background-color:orange;
+        font-size: 150%;
+        float: left ;
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 100%;
+        
+    }
+}
+@media only screen and (max-width: 590px) {
+  
+    .switchPageLeft{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+        
+    }
+    .switchPageRight{
+        width: 30%;
+        height: 2%;
+        background-size: 100%;
+        left:35%;
+        top:50%;
+        position:absolute;
+
+    }
+    .bookInfo{ 
+        width: 70%;
+        height:100%;
+        float:left;
+        background-color: blanchedalmond;
+        font-size: 50%;
+        
+    }
+}
+.bookmark2{
+    width: 120px;
+    height: 50px;
+    background-color: orange;
+    display: none;
+    text-align: center;
+}

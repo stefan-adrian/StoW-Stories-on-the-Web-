@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Progresul Proiectului</title>
+    <style>ol{ list-style-type: none; } body{margin-right:10%; margin-left: 10%; font-size:130%;}</style>
+</head>
+<body>
+    <header>
+        <h1>Progresul Proiectului</h1>
+    </header>
+    <div role="contentinfo">
+        <hr>
+        <link property="itemListOrder" >
+        <ol role="directory">
+            <li property="itemListElement" typeof="ListItem"><a href="#abstract">
+                <span>1.</span> Abstract</a>
+            </li>
+            <li property="itemListElement" typeof="ListItem"><a href="#introducere">
+                <span>2.</span> Introducere</a>
+            </li>
+            <li property="itemListElement" typeof="ListItem"><a href="#obiective">
+                <span>3.</span> Obiective</a>
+            </li>
+            <li property="itemListElement" typeof="ListItem"><a href="#etape">
+                <span>4.</span> Etape intermediare</a>
+            </li>
+            <li property="itemListElement" typeof="ListItem"><a href="#git">
+                <span>5.</span> Mod de lucru cu Github</a>
+            </li>
+             <li property="itemListElement" typeof="ListItem"><a href="#concluzie">
+                <span>6.</span> Concluzie</a>
+            </li>
+        </ol>
+      <dl>
+        <dt>Autori</dt>
+        <dd>
+          <a ><span property="familyName">Stefan</span><span property="givenName"> Adrian ,</span></a> 
+          <a ><span property="familyName">Anton</span> <span property="givenName"> Dragos-Razvan ,</span></a> 
+          <a ><span property="familyName">Mart</span><span property="givenName"> Florin</span></a> 
+        </dd>
+        <dt>Locatie proiect</dt>
+        <dd>
+            <a property="url" href="https://github.com/stefan-adrian/StoW-Stories-on-the-Web-">GitHub</a>
+        </dd>
+        
+      </dl>
+
+    </div>
+    <hr>
+    <section id="abstract" role="doc-introduction" property="about">
+        <h3><span>1.</span> Abstarct:</h3>
+        <p>
+			Acest raport este despre proiectul 'Stories on the Web' la materia Tehonologii Web.<br>
+			Aici sunt surprines detaliile legate despre acest proiect si etapele realizarii proiectului.
+		</p>
+    </section>
+        <section id="introducere" role="doc-introduction" property="about">
+        <h3><span>2.</span> Introducere:</h3>
+        <p>
+			Am dezvoltat o aplicatie Web pentru copii(cat si parintii cu copii mici) cu rolul de a oferi posibilitatea citirii povestilor online,
+			cat si de a asculta povestea audio.
+        </p>
+    </section>
+    <section id="obiective">
+        <h3><span>3.</span> Obiective:</h3>
+        <link property="itemListOrder">
+        <ul>
+            <li property="itemListElement" typeof="ListItem">
+                Dezvoltarea unei aplicatii Web care pune la dispozitie a povesti celebre atat pentru copii cat si pentru parinti cu copii mici.
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+                Pentru o experienta narativa placuta se vor oferi semne de carte, povesti cu posibilitatea alegerii finalului, lista personajelor povestii, descrierea povestii.
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+				In plus, se va oferi si posibilitatea de ascultarea audio a cartii.
+			</li>
+            <li property="itemListElement" typeof="ListItem">
+				Cartile vor fi grupate pe grupe de varsta iar un utilizator va putea sa vada toate cartile cu grupa de varsta mai mica sau egala decat varsta acestuia.   
+			</li>
+            <li property="itemListElement" typeof="ListItem">
+                Povestile vor fi importate pe baza unui fiser XML prin 'upload'.
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+                Administratorul va avea drepturile suplimentare de a adauga/sterge utilizatori,a adauga/sterge povesti si de a modifica informatiile despre povesti.
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+                Prevenirea atacurilor de tip SQL injection si Cross Site Scripting
+            </li>
+        </ul>
+    </section>
+    <section id="etape">
+        <h3><span>4.</span> Etape intermediare:</h3>
+        <link property="itemListOrder">
+        <ul property="steps">
+            <li property="itemListElement" typeof="ListItem">
+				Crearea unui MVC
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				Crearea bazei de date
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				Implementarea unui sistem de Login/Register
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+                Implementarea paginii de profil utilizator
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+                Implementarea paginii de afisare a detaliilor cartii
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+				Implementarea functionalitatii de upload carte
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+				Implementarea functionalitatii adminului de a sterge/adauga utilizatori
+			</li>
+            <li property="itemListElement" typeof="ListItem">
+                Implementarea paginii de citire a cartii
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+                Implementarea semnului de carte
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+                Implementarea api-ului de citire audio a cartii
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+                Implementarea listarii cartilor
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+				Implementarea functionalitatii adminului de a sterge/adauga carti si de a modifica informatii despre carte
+			</li>
+			<li property="itemListElement" typeof="ListItem">
+                Implementarea posbilitatea de cautare a cartilor
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+                Prevenire SQL injection si si Cross Site Scripting
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+				Finalizare lucru proiect
+            </li>
+			<li property="itemListElement" typeof="ListItem">
+				Raport în formatul Scholarly HTML
+			</li>
+        </ul>
+    </section>
+    </section>
+        <section id="git" role="doc-chapter" property="about">
+        <h3><span>5.</span>Modul de lucru cu Github</h3>
+        <p>
+		
+			Pentru managementul informatiilor am folosti GitHub, iar pentru lucrul cu acesta am folosit GitHub Desktop.
+        </p>
+    </section>
+
+        </section>
+        <section id="concluzie" role="doc-chapter" property="about">
+        <h3><span>6.</span>Concluzie</h3>
+        <p>
+		Asadar, prin parcurgerea parcuragand etapele intermediare am atins toate obiectivele proiectului si proiectul a fost finalizat.
+        </p>
+    </section>
+    
+</body>
+</html>

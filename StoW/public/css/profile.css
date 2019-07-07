@@ -1,0 +1,63 @@
+
+.main {
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+}
+
+.profile-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+span{
+  color: black;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: black;
+  font-size: 130%;
+}
+
+
+
+a {
+    text-decoration: none; 
+    color: white; 
+}
+
+
+@media only screen and (max-device-width: 550px) {
+
+  .profile-page {
+    width: 860px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    margin: 0 auto 120px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .form .message{
+    font-size: 500%;
+  }
+
+
+  
+}

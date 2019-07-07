@@ -1,0 +1,11 @@
+Login
+
+	Userul care nu este logat are de ales daca sa se logheze sau sa se inregistreze,
+	daca alege sa se intregistreze are de introdus datele pentru inregistrare(username,nume,prenume,parola etc)
+	urmand sa se valideze informatiile (sa se verifice daca nu exista un username cu numele respectiv in baza de date etc),
+	daca datele nu sunt valide userul este trimis inapoi la pagina de register iar daca sunt valide
+	datele sunt introduse in baza de date si este trimis inapoi sa se logheze.
+	Dupa asta trebuie introduse usernameul si parola care o sa fie validate cu informatiile existente
+	in baza de date. Daca se gaseste combinatia de username si parola in baza de date inseamna ca
+	datele au fost validate si userul ajunge in statusul registered user, in caz ca nu se gaseste
+	combinatia in baza de date este trimis inapoi la pagina de login.

@@ -1,0 +1,17 @@
+table td a {
+    background-color: #dddddd;
+}
+h1 {
+    margin-left: 20px;
+}
+form label { 
+	display: block;
+	float: left; 
+	width: 70px; 
+	padding: 0; 
+	margin: 9px 0 0;
+    margin-left: 20px;
+}
+table {
+    margin-left: 20px;
+}

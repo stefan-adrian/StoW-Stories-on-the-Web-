@@ -1,0 +1,182 @@
+.logo{
+    width: 150px;
+    height: 70px;
+    margin-top: -7px;
+    margin-left: 30px; 
+}
+.fixed-header, .fixed-footer{
+    width: 100%;
+    background: #333;
+    padding-bottom: 0px;
+    padding-top: 10px;
+    color: #fff;
+    height: 70px;
+}
+.fixed-header{
+    top: 0;
+}
+.fixed-footer{
+    bottom: 0;
+    height: 50px !important;
+    float: left;
+    position: absolute;
+}
+.container nav {
+    width: 33.33%;
+    height: 100%;
+}
+.container nav a{
+    padding: 0;
+}
+.container .centerHeader{
+    width: 33.33%;
+    z-index: 3;
+    height: 100%;
+    position: relative;
+}
+.container .rightHeader{
+    width:33.34%;
+    z-index: 3;
+    height: 100%;
+    text-align: right;
+    font-size: 1.5vw;
+    top: 50%;
+    margin-top: 5.5px;
+}
+ .rightHeader a:hover{
+    background-color: #9bbdf4;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+    
+  .centerHeader form input:focus {
+    border-color: #9bbdf4;
+    border: 3px;
+    }
+  .centerHeader form input{
+      width: 100%;
+      border: none;
+      height: 30px;
+      text-align: center;
+      font-size: 1.7vw;
+      position: absolute;
+      top: 50%;
+      margin-top: -1em;
+  }
+
+.rightHeader a{
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 25px;
+    display: inline-block;
+}
+.container{
+    width: 100%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    display : -webkit-inline-box;
+    position: relative;
+}
+.stow{
+    width: 20%;
+    margin: 0 0; /* Center the DIV horizontally */
+    height: 100%;
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: cursive;
+    font-style: oblique;
+}
+@media only screen and (max-width: 1256px) {
+    .container .centerHeader{
+        width: 40%;
+        z-index: 3;
+        height: 100%;
+        position: relative;
+    }
+    .container .rightHeader{
+        width: 35%;
+        z-index: 3;
+        height: 100%;
+        text-align: left;
+        font-size: 1.5vw;
+        top: 50%;
+        margin-top: 8.5px;
+    }
+    .container nav {
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 1109px){
+    .container .centerHeader{
+        width: 30%;
+        z-index: 3;
+        height: 100%;
+        position: relative;
+    }
+    .container .rightHeader{
+        width: 45%;
+        text-align: right;
+        margin-top: 14.5px;
+        font-size: 1.8vw;
+    }
+}
+@media only screen and (max-width: 843px){
+    .container .rightHeader{
+        font-size: 1.7vw;
+    }
+}
+@media only screen and (max-device-width: 601px) {
+    .container .rightHeader{
+        width:49%;
+        font-size: 2.5vw;
+        margin-top: 23.5px;
+        text-align: right;
+    }
+    .container nav {
+        width: 27%;
+    }
+    .container .centerHeader {
+        width: 25%;
+    }
+    .fixed-header{
+        height: 100px;
+    }
+    .logo{
+        height: 100px;
+    }
+    .centerHeader form input{
+        height: 40px;
+        font-size: 2.7vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .container .rightHeader{
+        width:49%;
+        font-size: 2.5vw;
+        margin-top: 23.5px;
+        text-align: right;
+    }
+    .container nav {
+        width: 27%;
+    }
+    .container .centerHeader {
+        width: 25%;
+    }
+    .fixed-header{
+        height: 100px;
+    }
+    .logo{
+        height: 100px;
+    }
+    .centerHeader form input{
+        height: 40px;
+        font-size: 2.7vw;
+    }
+}
